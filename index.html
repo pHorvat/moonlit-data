@@ -22,6 +22,7 @@
 						<div class="content">
 							<h1>Spotify Connect</h1>
 							<p class="major">A responsive one-page site for playing Spotify music.</p>
+							<p class="major" id="p1">Current song</p>
 							<ul class="actions stacked">
 								<li><a href="#now" class="button big wide smooth-scroll-middle">PLAY</a></li>
 							</ul>
@@ -76,6 +77,8 @@ player.connect().then(success => {
     console.log('The Web Playback SDK successfully connected to Spotify!');
   }
 })
+window.setInterval(function(){
+  /// call your function here
 
 player.getCurrentState().then(state => {
   if (!state) {
@@ -90,7 +93,11 @@ player.getCurrentState().then(state => {
 
   console.log('Currently Playing', current_track);
   console.log('Playing Next', next_track);
+
+  document.getElementById("p1").innerHTML = "Currently playing: "+current_track.name;
+
 });
+}, 5000);
 
 
 
