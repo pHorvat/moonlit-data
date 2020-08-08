@@ -79,7 +79,7 @@ player.connect().then(success => {
 
 player.getCurrentState().then(state => {
   if (!state) {
-    console.error('User is not playing music through the Web Playback SDK');
+    console.log('User is not playing music through the Web Playback SDK');
     return;
   }
 
