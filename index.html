@@ -24,7 +24,7 @@
 							<p class="major">A responsive one-page site for playing Spotify music.</p>
 							<p class="major" id="p1">Current song</p>
 							<ul class="actions stacked">
-								<li><a href="#now" class="button big wide smooth-scroll-middle">PLAY</a></li>
+								<li><button  id="tglBtn" class="button big wide smooth-scroll-middle">PLAY</button></li>
 							</ul>
 						</div>
 						<div class="image">
@@ -66,7 +66,7 @@
   getOAuthToken: callback => {
     // Run code to get a fresh access token
 
-    callback('BQAeGSUqtcyGvTDquTteftOzuxKKO6vypJyBmFuihyZ5DMIlbxNuockik0ltJCRMdm4JBoZDscJbM_Sv4Vw4rf2VwMwhG3GK9T5azU1fwzZDDOOjKhDyIFTXbLJNMSVw7enFDtMr6oCDQ8AdgiqNJQNF5dj1zd9jrvwG-MsyzIuwoFvDJnUyths');
+    callback('BQCfRABF7MdODK9tw_NNiqhGRgcyYzfWCUKMlvHreupzw38fYFbuEPcYalkjmxLe0mlN_2qlpcwzn0810pXoNzAI1VCNgMkoUPEn_DsdGHVut4cyjzMjKlwhq4pBnY2hVA833NwXld5UiggHMHBgeCvh0RFsIYuW1AZ6yKCSmpnRsDRU_mlCGAY');
   },
   volume: 0.5
 });
@@ -77,8 +77,13 @@ player.connect().then(success => {
     console.log('The Web Playback SDK successfully connected to Spotify!');
   }
 })
-window.setInterval(function(){
-  /// call your function here
+
+
+
+
+
+
+  
 
 player.getCurrentState().then(state => {
   if (!state) {
@@ -94,10 +99,43 @@ player.getCurrentState().then(state => {
   console.log('Currently Playing', current_track);
   console.log('Playing Next', next_track);
 
-  document.getElementById("p1").innerHTML = "Currently playing: "+current_track.name;
+  
 
 });
-}, 5000);
+
+player.addListener('player_state_changed', ({
+  position,
+  duration,
+  track_window: { current_track }
+}) => {
+  console.log('Currently Playing', current_track);
+  console.log('Position in Song', position);
+  console.log('Duration of Song', duration);
+  document.getElementById("p1").innerHTML = "Currently playing: "+current_track.name;
+});
+
+
+document.getElementById("tglBtn").addEventListener("click", toggleIt);
+
+var btnStatus = 1;
+function toggleIt() {
+player.togglePlay().then(() => {
+  console.log('Toggled playback!');
+});
+if(btnStatus==1){
+document.getElementById("tglBtn").innerHTML ="STOP";	
+btnStatus=2
+}
+else{
+	btnStatus=1;
+	document.getElementById("tglBtn").innerHTML ="PLAY";	
+}
+
+
+ 
+}
+
+
 
 
 
