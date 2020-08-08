@@ -60,11 +60,7 @@
 			<script>
 		window.onSpotifyWebPlaybackSDKReady = () => {
 		  // You can now initialize Spotify.Player and use the SDK
-		};
-
-
-			
-var player = new Spotify.Player({
+		  var player = new Spotify.Player({
   name: 'Carly Rae Jepsen Player',
   getOAuthToken: callback => {
     // Run code to get a fresh access token
@@ -73,6 +69,11 @@ var player = new Spotify.Player({
   },
   volume: 0.5
 });
+		};
+
+
+
+
 		</script>
 
 
