@@ -69,6 +69,18 @@
   },
   volume: 0.5
 });
+
+
+player.connect().then(success => {
+  if (success) {
+    console.log('The Web Playback SDK successfully connected to Spotify!');
+  }
+})
+
+	
+player.togglePlay().then(() => {
+  console.log('Toggled playback!');
+});
 		};
 
 
