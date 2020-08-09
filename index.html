@@ -64,7 +64,17 @@
 					window.location.href = 'https://accounts.spotify.com/authorize?response_type=code&client_id=a76acd175e5f456fb50b35d2ad2d19b5&redirect_uri=https://phorvat.github.io/moonlit-data/&scope=user-follow-modify&state=e21392da45dbf4&code_challenge=KADwyz1X~HIdcAG20lnXitK6k51xBP4pEMEZHmCneHD1JhrcHjE1P3yU_NjhBz4TdhV6acGo16PCd10xLwMJJ4uCutQZHw&code_challenge_method=S256\n';
 				}
 
-
+				function authKey() {
+					var xhttp = new XMLHttpRequest();
+					xhttp.onreadystatechange = function() {
+						if (this.readyState === 4 && this.status === 200) {
+							alert(this.responseText);
+						}
+					};
+					xhttp.open("POST", "https://accounts.spotify.com/api/token", true);
+					xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+					xhttp.send("Your JSON Data Here");
+				}
 
 				window.onSpotifyWebPlaybackSDKReady = () => {
 					const token = '';
@@ -99,7 +109,7 @@
 				};
 
 
-
+				authKey();
 			</script>
 
 
