@@ -20,11 +20,11 @@
 				<!-- One -->
 					<section class="banner style1 orient-left content-align-left image-position-right fullscreen onload-image-fade-in onload-content-fade-right">
 						<div class="content">
-							<h1>Moonlit Data Music Player!</h1>
-							<p class="major">A responsive one-page site for playing music.</p>
-							<p class="major" id="p1">Current song</p>
+							<h1>Moonlit Data</h1>
+							<p class="major">A responsive one-page site for astronomical data</p>
+							<p class="major" id="p1">Current Image</p>
 							<ul class="actions stacked">
-								<li><button  id="tglBtn" class="button big wide smooth-scroll-middle">PLAY</button></li>
+								<li><button  id="tglBtn" class="button big wide smooth-scroll-middle">SHOW</button></li>
 							</ul>
 						</div>
 						<div class="image">
@@ -57,107 +57,8 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
-			<script src="https://sdk.scdn.co/spotify-player.js"></script>
-			<script>
-		window.onSpotifyWebPlaybackSDKReady = () => {
-		  // You can now initialize Spotify.Player and use the SDK
-		  var player = new Spotify.Player({
-  name: 'Moonlit Data Player',
-  getOAuthToken: callback => {
-    // Run code to get a fresh access token
-
-    callback('BQCfRABF7MdODK9tw_NNiqhGRgcyYzfWCUKMlvHreupzw38fYFbuEPcYalkjmxLe0mlN_2qlpcwzn0810pXoNzAI1VCNgMkoUPEn_DsdGHVut4cyjzMjKlwhq4pBnY2hVA833NwXld5UiggHMHBgeCvh0RFsIYuW1AZ6yKCSmpnRsDRU_mlCGAY');
-  },
-  volume: 0.5
-});
-
-
-player.connect().then(success => {
-  if (success) {
-    console.log('The Web Playback SDK successfully connected to Spotify!');
-  }
-})
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-
-player.getCurrentState().then(state => {
-  if (!state) {
-    console.log('User is not playing music through the Web Playback SDK');
-    return;
-  }
-
-  let {
-    current_track,
-    next_tracks: [next_track]
-  } = state.track_window;
-
-  console.log('Currently Playing', current_track);
-  console.log('Playing Next', next_track);
-
-  
-
-});
-
-player.addListener('player_state_changed', ({
-  position,
-  duration,
-  track_window: { current_track }
-}) => {
-  console.log('Currently Playing', current_track);
-  console.log('Position in Song', position);
-  console.log('Duration of Song', duration);
-  document.getElementById("p1").innerHTML = "Currently playing: "+current_track.name;
-});
-
-
-document.getElementById("tglBtn").addEventListener("click", toggleIt);
-
-var btnStatus = 1;
-function toggleIt() {
-player.togglePlay().then(() => {
-  console.log('Toggled playback!');
-});
-if(btnStatus==1){
-document.getElementById("tglBtn").innerHTML ="STOP";	
-btnStatus=2
-}
-else{
-	btnStatus=1;
-	document.getElementById("tglBtn").innerHTML ="PLAY";	
-}
-
-
- 
-}
-
-
-
-
-
-		};
-
-
-
-
-		</script>
-
+			<script src="https://api.nasa.gov/planetary/apod?api_key=cbdtPGo3ja0tDg5VctIUIGl01xLtz1ujbfwtj8lr"></script>
+	
 
 
  
