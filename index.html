@@ -88,8 +88,8 @@ xmlhttp.onreadystatechange = function() {
   if (this.readyState == 4 && this.status == 200) {
     var myObj = JSON.parse(this.responseText);
     document.getElementById("p1").innerHTML = myObj[0].caption;
-    document.getElementById("img1").src = myObj[0].image+".png";
-
+    document.getElementById("img1").src = "https://api.nasa.gov/EPIC/archive/natural/2019/05/30/png/"+myObj[5].image+".png?api_key=cbdtPGo3ja0tDg5VctIUIGl01xLtz1ujbfwtj8lr";
+//https://api.nasa.gov/EPIC/archive/natural/2019/05/30/png/epic_1b_20190530011359.png?api_key=DEMO_KEY
   }
 };   
 xmlhttp.open("GET", "https://api.nasa.gov/EPIC/api/natural/images?api_key=cbdtPGo3ja0tDg5VctIUIGl01xLtz1ujbfwtj8lr", true);
