@@ -57,6 +57,19 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+			<script>
+
+
+				var request = new XMLHttpRequest()
+				request.open('PUT', 'https://api.spotify.com/v1/me/player/play', true)
+				request.onload = function () {
+					// Begin accessing JSON data here
+				}
+
+				// Send request
+				request.send()
+
+			</script>
 
 
  
