@@ -57,50 +57,6 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
-			<script src="https://api.nasa.gov/planetary/apod?api_key=cbdtPGo3ja0tDg5VctIUIGl01xLtz1ujbfwtj8lr"></script>
-						<script src="https://api.nasa.gov/EPIC/api/natural/images?api_key=cbdtPGo3ja0tDg5VctIUIGl01xLtz1ujbfwtj8lr"></script>
-
-			<script type="text/javascript">
-var state = 2;
-function next(){
-	/*if(state==1){
-		var xmlhttp = new XMLHttpRequest();
-	
-xmlhttp.onreadystatechange = function() {
-
- if (this.readyState == 4 && this.status == 200) {
-    var myObj = JSON.parse(this.responseText);
-    document.getElementById("p1").innerHTML = myObj.explanation;
-    document.getElementById("img1").src = myObj.hdurl;
- 
-  }
-};   
-xmlhttp.open("GET", "https://api.nasa.gov/planetary/apod?api_key=cbdtPGo3ja0tDg5VctIUIGl01xLtz1ujbfwtj8lr", true);
-xmlhttp.send();
-state++;
-return;
-}*/
-if(state==2){
-		var xmlhttp = new XMLHttpRequest();
-	
-xmlhttp.onreadystatechange = function() {
-
-  if (this.readyState == 4 && this.status == 200) {
-    var myObj = JSON.parse(this.responseText);
-    document.getElementById("p1").innerHTML = myObj[0].caption;
-    document.getElementById("img1").src = "https://api.nasa.gov/EPIC/archive/natural/2019/05/30/png/"+myObj[5].image+".png?api_key=cbdtPGo3ja0tDg5VctIUIGl01xLtz1ujbfwtj8lr";
-//https://api.nasa.gov/EPIC/archive/natural/2019/05/30/png/epic_1b_20190530011359.png?api_key=DEMO_KEY
-  }
-};   
-xmlhttp.open("GET", "https://api.nasa.gov/EPIC/api/natural/images?api_key=cbdtPGo3ja0tDg5VctIUIGl01xLtz1ujbfwtj8lr", true);
-xmlhttp.send();
-state=1;
-return;
-}}
-
-
-
-</script>
 
 
  
