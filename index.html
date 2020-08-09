@@ -24,11 +24,11 @@
 							<p class="major">A responsive one-page site for astronomical data</p>
 							<p class="major" id="p1">Current Image</p>
 							<ul class="actions stacked">
-								<li><button  id="tglBtn" class="button big wide smooth-scroll-middle">SHOW</button></li>
+								<li><button onclick="next()"  id="tglBtn" class="button big wide smooth-scroll-middle">NEXT</button></li>
 							</ul>
 						</div>
 						<div class="image">
-							<img src="images/banner.jpg" alt="" />
+							<img id="img1" src="images/banner.jpg" alt="" />
 						</div>
 					</section>
 
@@ -58,7 +58,49 @@
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
 			<script src="https://api.nasa.gov/planetary/apod?api_key=cbdtPGo3ja0tDg5VctIUIGl01xLtz1ujbfwtj8lr"></script>
+						<script src="https://api.nasa.gov/EPIC/api/natural/images?api_key=cbdtPGo3ja0tDg5VctIUIGl01xLtz1ujbfwtj8lr"></script>
+
+			<script type="text/javascript">
+var state = 2;
+function next(){
+	/*if(state==1){
+		var xmlhttp = new XMLHttpRequest();
 	
+xmlhttp.onreadystatechange = function() {
+
+ if (this.readyState == 4 && this.status == 200) {
+    var myObj = JSON.parse(this.responseText);
+    document.getElementById("p1").innerHTML = myObj.explanation;
+    document.getElementById("img1").src = myObj.hdurl;
+ 
+  }
+};   
+xmlhttp.open("GET", "https://api.nasa.gov/planetary/apod?api_key=cbdtPGo3ja0tDg5VctIUIGl01xLtz1ujbfwtj8lr", true);
+xmlhttp.send();
+state++;
+return;
+}*/
+if(state==2){
+	var xmlhttp = new XMLHttpRequest();
+	
+xmlhttp.onreadystatechange = function() {
+
+ if (this.readyState == 4 && this.status == 200) {
+    var myObj = JSON.parse(this.responseText);
+    document.getElementById("p1").innerHTML = myObj.explanation;
+    document.getElementById("img1").src = myObj.hdurl;
+ 
+  }
+};   
+xmlhttp.open("GET", "https://api.nasa.gov/planetary/apod?api_key=cbdtPGo3ja0tDg5VctIUIGl01xLtz1ujbfwtj8lr", true);
+xmlhttp.send();
+state=1;
+return;
+}}
+
+
+
+</script>
 
 
  
