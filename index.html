@@ -81,18 +81,18 @@ state++;
 return;
 }*/
 if(state==2){
-	var xmlhttp = new XMLHttpRequest();
+		var xmlhttp = new XMLHttpRequest();
 	
 xmlhttp.onreadystatechange = function() {
 
- if (this.readyState == 4 && this.status == 200) {
+  if (this.readyState == 4 && this.status == 200) {
     var myObj = JSON.parse(this.responseText);
-    document.getElementById("p1").innerHTML = myObj.explanation;
-    document.getElementById("img1").src = myObj.hdurl;
- 
+    document.getElementById("p1").innerHTML = myObj[0].caption;
+    document.getElementById("img1").src = myObj[0].image+".png";
+
   }
 };   
-xmlhttp.open("GET", "https://api.nasa.gov/planetary/apod?api_key=cbdtPGo3ja0tDg5VctIUIGl01xLtz1ujbfwtj8lr", true);
+xmlhttp.open("GET", "https://api.nasa.gov/EPIC/api/natural/images?api_key=cbdtPGo3ja0tDg5VctIUIGl01xLtz1ujbfwtj8lr", true);
 xmlhttp.send();
 state=1;
 return;
