@@ -87,7 +87,13 @@
                if (this.readyState === 4 && this.status === 200) {
                    //document.getElementById("demo").innerHTML = this.responseText;
                    console.log(this.responseText);
-                   accToken=this.responseText.access_token;
+
+                   const obj = JSON.parse(this.responseText);
+                   accToken=obj.access_token;
+
+
+
+
                    console.log("The acc token is:     "+accToken);
                }
            };
