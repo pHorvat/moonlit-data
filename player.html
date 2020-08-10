@@ -87,9 +87,9 @@
                 alert(this.responseText);
             }
         };
-        xhttp.open("POST", "https://accounts.spotify.com/api/token&client_id=a76acd175e5f456fb50b35d2ad2d19b5&grant_type=authorization_code&code="+authcode+"&redirect_uri=https://phorvat.github.io/moonlit-data/player&code_verifier=", true);
+        xhttp.open("POST", "https://accounts.spotify.com/api/token&client_id=a76acd175e5f456fb50b35d2ad2d19b5&grant_type=authorization_code&code="+authcode+"&redirect_uri=https://phorvat.github.io/moonlit-data/player&code_verifier=rw0vzdC_GMEcmKl327xClLVu83wEpqsH.lHSFViwwrLwJq7KNGiVM2E4jGkGeYdPA3z5AnZiKw~Fv.AMFkz8R0Uoxvn~31ptjk5cCRdGC-LVb-EvJj5YLqybM~Yn7AbY", true);
         xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-        xhttp.send("Your JSON Data Here");
+        xhttp.send();
     }
    /*
 
