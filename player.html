@@ -99,43 +99,44 @@
     xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
     xhttp.send("client_id=a76acd175e5f456fb50b35d2ad2d19b5&grant_type=authorization_code&code="+authcode+"&redirect_uri=https://phorvat.github.io/moonlit-data/player&code_verifier=3s4XblqY5sdRZemjLD1ZTBrSVbwXwELyjTwmQOmK6okdt");
 
+        window.onSpotifyWebPlaybackSDKReady = () => {
+            const play = ({
+                              spotify_uri,
+                              playerInstance: {
+                                  _options: {
+                                      getOAuthToken,
+                                      id
+                                  }
+                              }
+                          }) => {
+                getOAuthToken(access_token => {
+                    fetch(`https://api.spotify.com/v1/me/player/play?device_id=${id}`, {
+                        method: 'PUT',
+                        body: JSON.stringify({ uris: [spotify_uri] }),
+                        headers: {
+                            'Content-Type': 'application/json',
+                            'Authorization': `Bearer ${access_token}`
+                        },
+                    });
+                });
+            };
+
+            play({
+                playerInstance: new Spotify.Player({ name: "..." }),
+                spotify_uri: 'spotify:track:7xGfFoTpQ2E7fRF5lN10tr',
+            });
+        };
+
     }
 
 
     function loadDoc() {
+    console.log("something is happening!");
 
 
-           window.onSpotifyWebPlaybackSDKReady = () => {
-               const token = accToken;
-               const player = new Spotify.Player({
-                   name: 'Web Playback SDK Quick Start Player',
-                   getOAuthToken: cb => { cb(token); }
-               });
-
-               // Error handling
-               player.addListener('initialization_error', ({ message }) => { console.log(message); });
-               player.addListener('authentication_error', ({ message }) => { console.log(message); });
-               player.addListener('account_error', ({ message }) => { console.log(message); });
-               player.addListener('playback_error', ({ message }) => { console.log(message); });
-
-               // Playback status updates
-               player.addListener('player_state_changed', state => { console.log(state); });
-
-               // Ready
-               player.addListener('ready', ({ device_id }) => {
-                   console.log('Ready with Device ID', device_id);
-               });
-
-               // Not Ready
-               player.addListener('not_ready', ({ device_id }) => {
-                   console.log('Device ID has gone offline', device_id);
-               });
-
-               // Connect to the player!
-               player.connect();
 
 
-           };
+           }
 
 
 
@@ -143,7 +144,7 @@
 
 
 
-       }
+
 
        setup();
 
