@@ -73,12 +73,13 @@
         return params;
     };
 
-    console.log(getParams(window.location.href).code);
+    var authcode = getParams(window.location.href).code
+    console.log(authcode);
 
 
 
 
-    /*
+
     function authKey() {
         var xhttp = new XMLHttpRequest();
         xhttp.onreadystatechange = function() {
@@ -86,11 +87,11 @@
                 alert(this.responseText);
             }
         };
-        xhttp.open("POST", "https://accounts.spotify.com/api/token&client_id=a76acd175e5f456fb50b35d2ad2d19b5&", true);
+        xhttp.open("POST", "https://accounts.spotify.com/api/token&client_id=a76acd175e5f456fb50b35d2ad2d19b5&grant_type=authorization_code&code="+authcode+"&redirect_uri=https://phorvat.github.io/moonlit-data/player&code_verifier=", true);
         xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
         xhttp.send("Your JSON Data Here");
     }
-
+   /*
 
     window.onSpotifyWebPlaybackSDKReady = () => {
         const token = '';
