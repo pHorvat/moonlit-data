@@ -21,10 +21,10 @@
     <section class="banner style1 orient-left content-align-left image-position-right fullscreen onload-image-fade-in onload-content-fade-right">
         <div  class="content">
             <h1>Moonlit Data</h1>
-            <p class="major">A responsive one-page site for random data</p>
+            <p class="major" id="demo">A responsive one-page site for random data</p>
             <p class="major" id="p1">Current Image</p>
             <ul class="actions stacked">
-                <li><button href="#" onclick="UserAction()"  id="tglBtn" class="button big wide smooth-scroll-middle">PLAY</button></li>
+                <li><button href="#" onclick="loadDoc()"  id="tglBtn" class="button big wide smooth-scroll-middle">PLAY</button></li>
             </ul>
         </div>
         <div class="image">
@@ -76,21 +76,23 @@
     var authcode = getParams(window.location.href).code
     console.log(authcode);
 
+   //https://accounts.spotify.com/api/token&client_id=a76acd175e5f456fb50b35d2ad2d19b5&grant_type=authorization_code&code="+authcode+"&redirect_uri=https://phorvat.github.io/moonlit-data/player&code_verifier=3s4XblqY5sdRZemjLD1ZTBrSVbwXwELyjTwmQOmK6okdt
 
 
 
 
-    function authKey() {
-        var xhttp = new XMLHttpRequest();
-        xhttp.onreadystatechange = function() {
-            if (this.readyState === 4 && this.status === 200) {
-                alert(this.responseText);
-            }
-        };
-        xhttp.open("POST", "https://accounts.spotify.com/api/token&client_id=a76acd175e5f456fb50b35d2ad2d19b5&grant_type=authorization_code&code="+authcode+"&redirect_uri=https://phorvat.github.io/moonlit-data/player&code_verifier=rw0vzdC_GMEcmKl327xClLVu83wEpqsH.lHSFViwwrLwJq7KNGiVM2E4jGkGeYdPA3z5AnZiKw~Fv.AMFkz8R0Uoxvn~31ptjk5cCRdGC-LVb-EvJj5YLqybM~Yn7AbY", true);
-        xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-        xhttp.send();
-    }
+       function loadDoc() {
+           var xhttp = new XMLHttpRequest();
+           xhttp.onreadystatechange = function() {
+               if (this.readyState === 4 && this.status === 200) {
+                   //document.getElementById("demo").innerHTML = this.responseText;
+                   console.log(this.responseText);
+               }
+           };
+           xhttp.open("POST", "https://accounts.spotify.com/api/token", true);
+           xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+           xhttp.send("client_id=a76acd175e5f456fb50b35d2ad2d19b5&grant_type=authorization_code&code="+authcode+"&redirect_uri=https://phorvat.github.io/moonlit-data/player&code_verifier=3s4XblqY5sdRZemjLD1ZTBrSVbwXwELyjTwmQOmK6okdt");
+       }
    /*
 
     window.onSpotifyWebPlaybackSDKReady = () => {
@@ -127,7 +129,6 @@
 
 
     authKey(); */
-
 
 </script>
 
