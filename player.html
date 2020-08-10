@@ -60,6 +60,8 @@
 <script src="https://sdk.scdn.co/spotify-player.js"></script>
 <script>
 
+
+    function setup(){
     var getParams = function (url) {
         var params = {};
         var parser = document.createElement('a');
@@ -78,28 +80,29 @@
 
    //https://accounts.spotify.com/api/token&client_id=a76acd175e5f456fb50b35d2ad2d19b5&grant_type=authorization_code&code="+authcode+"&redirect_uri=https://phorvat.github.io/moonlit-data/player&code_verifier=3s4XblqY5sdRZemjLD1ZTBrSVbwXwELyjTwmQOmK6okdt
 
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+        if (this.readyState === 4 && this.status === 200) {
+            //document.getElementById("demo").innerHTML = this.responseText;
+            console.log(this.responseText);
 
-
-
-       function loadDoc() {
-           var xhttp = new XMLHttpRequest();
-           xhttp.onreadystatechange = function() {
-               if (this.readyState === 4 && this.status === 200) {
-                   //document.getElementById("demo").innerHTML = this.responseText;
-                   console.log(this.responseText);
-
-                   const obj = JSON.parse(this.responseText);
-                   accToken=obj.access_token;
+            const obj = JSON.parse(this.responseText);
+            accToken=obj.access_token;
 
 
 
 
-                   console.log("The acc token is:     "+accToken);
-               }
-           };
-           xhttp.open("POST", "https://accounts.spotify.com/api/token", true);
-           xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-           xhttp.send("client_id=a76acd175e5f456fb50b35d2ad2d19b5&grant_type=authorization_code&code="+authcode+"&redirect_uri=https://phorvat.github.io/moonlit-data/player&code_verifier=3s4XblqY5sdRZemjLD1ZTBrSVbwXwELyjTwmQOmK6okdt");
+            console.log("The acc token is:     "+accToken);
+        }
+    };
+    xhttp.open("POST", "https://accounts.spotify.com/api/token", true);
+    xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+    xhttp.send("client_id=a76acd175e5f456fb50b35d2ad2d19b5&grant_type=authorization_code&code="+authcode+"&redirect_uri=https://phorvat.github.io/moonlit-data/player&code_verifier=3s4XblqY5sdRZemjLD1ZTBrSVbwXwELyjTwmQOmK6okdt");
+
+    }
+
+
+    function loadDoc() {
 
 
            window.onSpotifyWebPlaybackSDKReady = () => {
@@ -142,6 +145,7 @@
 
        }
 
+       setup();
 
 
 
