@@ -8628,7 +8628,7 @@ input, select, textarea {
 	width: 25px;
 	height: 25px;
 	border-radius: 50%;
-	background: #0077ff;
+	background: #000000;
 	cursor: pointer;
 }
 
@@ -8636,7 +8636,7 @@ input, select, textarea {
 	width: 25px;
 	height: 25px;
 	border-radius: 50%;
-	background: #0077ff;
+	background: #000000;
 	cursor: pointer;
 }
 
