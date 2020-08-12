@@ -94,12 +94,14 @@ window.onSpotifyPlayerAPIReady = () => {
 
         console.log('Currently Playing', current_track);
         console.log('Playing Next', next_track);
-
+        setVol();
     });
 
-    player.setVolume(0.3).then(() => {
-        console.log('Default volume set');
-    });
+    function setVol() {
+        player.setVolume(0.3).then(() => {
+            console.log('Default volume set');
+        });
+    }
 
 
     var slider = document.getElementById("myRange");
@@ -125,6 +127,7 @@ function play(device_id) {
         beforeSend: function(xhr){xhr.setRequestHeader('Authorization', 'Bearer ' + _token );},
         success: function(data) {
             console.log(data)
+
         }
     });
 }
