@@ -115,18 +115,27 @@
             console.log('Volume updated!');
         });
 
-
-
-        player.play({
-            playerInstance: player(),
-            spotify_uri: 'spotify:track:7xGfFoTpQ2E7fRF5lN10tr',
-            deviceId: this.deviceId
-        });
-
+        playSong('spotify:album:1Je1IMUlBXcx1Fz0WE7oPT', token);
 
 
     //end of Spotify SKD wrap
     };
+
+    function playSong(uri, token) {
+        fetch("https://api.spotify.com/v1/me/player/play", {
+            method: "PUT",
+            headers: {
+                "Accept": "application/json",
+                "Content-Type": "application/json",
+                Authorization: "Bearer " + token,
+            },
+            body: JSON.stringify({
+                context_uri: uri,
+            }),
+        });
+    }
+
+
 
 
     var getParams = function (url) {
