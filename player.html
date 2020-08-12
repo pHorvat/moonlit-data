@@ -87,7 +87,7 @@
         });
 
         // Connect to the player!
-
+        player.connect();
 
         player.getCurrentState().then(state => {
             if (!state) {
@@ -115,8 +115,8 @@
             console.log('Volume updated!');
         });
 
-        playSong('spotify:album:1Je1IMUlBXcx1Fz0WE7oPT', returnAccToken());
-        player.connect();
+         //playSong('spotify:album:1Je1IMUlBXcx1Fz0WE7oPT', returnAccToken());
+
 
     //end of Spotify SKD wrap
     };
