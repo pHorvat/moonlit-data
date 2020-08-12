@@ -111,6 +111,17 @@
             });
         });
 
+        player.setVolume(0.5).then(() => {
+            console.log('Volume updated!');
+        });
+
+
+
+        player.play({
+            playerInstance: player(),
+            spotify_uri: 'spotify:track:7xGfFoTpQ2E7fRF5lN10tr',
+            deviceId: this.deviceId
+        });
 
 
 
