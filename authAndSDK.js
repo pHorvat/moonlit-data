@@ -65,6 +65,13 @@ window.onSpotifyPlayerAPIReady = () => {
 
     // Connect to the player!
     player.connect();
+
+    function togglePly() {
+        player.togglePlay().then(() => {
+            console.log('Toggled playback!');
+        });
+    }
+
 }
 
 // Play a specified track on the Web Playback SDK's device ID
