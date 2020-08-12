@@ -8612,7 +8612,7 @@ input, select, textarea {
 
 .slidecontainer {
 	width: 100%; /* Width of the outside container */
-	margin-bottom: 50px;
+	/*margin-bottom: 50px*/;
 }
 
 /* The slider itself */
