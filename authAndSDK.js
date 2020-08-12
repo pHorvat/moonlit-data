@@ -52,7 +52,12 @@ window.onSpotifyPlayerAPIReady = () => {
         $('#current-track').attr('src', state.track_window.current_track.album.images[0].url);
         $('#current-track-name').text(state.track_window.current_track.name);
         $('#current-track-artist').text(state.track_window.current_track.artists[0].name);
-
+        if(state.paused===true){
+            document.getElementById("tglBtn").innerHTML = "PLAY";
+        }
+        else {
+            document.getElementById("tglBtn").innerHTML = "STOP";
+        }
     });
 
     // Ready
@@ -77,13 +82,10 @@ window.onSpotifyPlayerAPIReady = () => {
     player.getCurrentState().then(state => {
         if (!state) {
             console.log('User is not playing music through the Web Playback SDK');
-            document.getElementById("tglBtn").innerHTML = "PLAY!";
+
             return;
         }
-        else{
-            document.getElementById("tglBtn").innerHTML = "STOP!";
 
-        }
 
         let {
             current_track,
@@ -92,6 +94,7 @@ window.onSpotifyPlayerAPIReady = () => {
 
         console.log('Currently Playing', current_track);
         console.log('Playing Next', next_track);
+
     });
 
 }
