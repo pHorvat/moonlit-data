@@ -45,7 +45,7 @@
 								<li><a href="#" class="icon style2 fa-envelope"><span class="label">Email</span></a></li>-->
 							</ul>
 							<p>&copy; Patrik Horvat. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
-							<p class="major" style="font-size: 15px">V 2.24</p>
+							<p class="major" style="font-size: 15px">V 2.3</p>
 						</div>
 					</footer>
 
@@ -59,72 +59,15 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
-		<!--<script src="https://sdk.scdn.co/spotify-player.js"></script>-->
         <script>
-
-
-
-			//user-read-email%20streaming %20user-modify-playback-state %20user-read-playback-state %20user-read-currently-playing
-
-
 
             function UserAction(){
                // window.location.href = 'https://accounts.spotify.com/authorize?response_type=code&client_id=a76acd175e5f456fb50b35d2ad2d19b5&redirect_uri=https://phorvat.github.io/moonlit-data/moonlit-player&scope=user-follow-modify&state=e21392da45dbf4&code_challenge=ifIlgzSZIpB0QSOeNQjOB143pWO0xLbhLmuw1I1VKNM&code_challenge_method=S256';
 				window.location.href = 'https://phorvat.github.io/moonlit-data/moonlit-player';
 
 			}
-            /*
-            function authKey() {
-                var xhttp = new XMLHttpRequest();
-                xhttp.onreadystatechange = function() {
-                    if (this.readyState === 4 && this.status === 200) {
-                        alert(this.responseText);
-                    }
-                };
-                xhttp.open("POST", "https://accounts.spotify.com/api/token", true);
-                xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-                xhttp.send("Your JSON Data Here");
-            }
 
-            window.onSpotifyWebPlaybackSDKReady = () => {
-                const token = '';
-                const player = new Spotify.Player({
-                    name: 'Web Playback SDK Quick Start Player',
-                    getOAuthToken: cb => { cb(token); }
-                });
-
-                // Error handling
-                player.addListener('initialization_error', ({ message }) => { console.log(message); });
-                player.addListener('authentication_error', ({ message }) => { console.log(message); });
-                player.addListener('account_error', ({ message }) => { console.log(message); });
-                player.addListener('playback_error', ({ message }) => { console.log(message); });
-
-                // Playback status updates
-                player.addListener('player_state_changed', state => { console.log(state); });
-
-                // Ready
-                player.addListener('ready', ({ device_id }) => {
-                    console.log('Ready with Device ID', device_id);
-                });
-
-                // Not Ready
-                player.addListener('not_ready', ({ device_id }) => {
-                    console.log('Device ID has gone offline', device_id);
-                });
-
-                // Connect to the player!
-                player.connect();
-
-
-            };
-
-
-            authKey();
-
-             */
         </script>
-
-
 
 </body>
 </html>
