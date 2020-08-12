@@ -87,7 +87,7 @@
         });
 
         // Connect to the player!
-        player.connect();
+
 
         player.getCurrentState().then(state => {
             if (!state) {
@@ -116,7 +116,7 @@
         });
 
         playSong('spotify:album:1Je1IMUlBXcx1Fz0WE7oPT', returnAccToken());
-
+        player.connect();
 
     //end of Spotify SKD wrap
     };
