@@ -58,6 +58,7 @@ window.onSpotifyPlayerAPIReady = () => {
         else {
             document.getElementById("tglBtn").innerHTML = "STOP";
         }
+        setVol();
     });
 
     // Ready
@@ -94,7 +95,7 @@ window.onSpotifyPlayerAPIReady = () => {
 
         console.log('Currently Playing', current_track);
         console.log('Playing Next', next_track);
-        setVol();
+
     });
 
     function setVol() {
