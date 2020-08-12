@@ -97,6 +97,10 @@ window.onSpotifyPlayerAPIReady = () => {
 
     });
 
+    player.setVolume(0.3).then(() => {
+        console.log('Default volume set');
+    });
+
 
     var slider = document.getElementById("myRange");
     //var output = document.getElementById("demo");
@@ -109,9 +113,6 @@ window.onSpotifyPlayerAPIReady = () => {
             console.log('Volume updated!');
         });
     }
-
-
-
 
 }
 
