@@ -21,7 +21,6 @@ const clientId = 'a76acd175e5f456fb50b35d2ad2d19b5';
 const redirectUri = 'https://phorvat.github.io/moonlit-data/moonlit-player';
 const scopes = [
     'streaming',
-    'user-read-birthdate',
     'user-read-private',
     'user-modify-playback-state'
 ];
