@@ -22,7 +22,8 @@ const redirectUri = 'https://phorvat.github.io/moonlit-data/moonlit-player';
 const scopes = [
     'streaming',
     'user-read-private',
-    'user-modify-playback-state'
+    'user-modify-playback-state',
+    'user-read-email'
 ];
 const verifier ='cfAc8a0B7JE2MN9uilbtKxdYHTvwGqvEbtPOd4r2oXbBy';
 const challenge1 = 'ifIlgzSZIpB0QSOeNQjOB143pWO0xLbhLmuw1I1VKNM';
