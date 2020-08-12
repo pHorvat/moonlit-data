@@ -105,7 +105,7 @@ window.onSpotifyPlayerAPIReady = () => {
 // Update the current slider value (each time you drag the slider handle)
     slider.oninput = function() {
         //output.innerHTML = this.value;
-        player.setVolume((this.value)/10).then(() => {
+        player.setVolume((this.value)/100).then(() => {
             console.log('Volume updated!');
         });
     }
