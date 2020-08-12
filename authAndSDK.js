@@ -58,7 +58,7 @@ window.onSpotifyPlayerAPIReady = () => {
         else {
             document.getElementById("tglBtn").innerHTML = "STOP";
         }
-        setVol();
+
     });
 
     // Ready
@@ -66,6 +66,7 @@ window.onSpotifyPlayerAPIReady = () => {
         console.log('Ready with Device ID', data.device_id);
 
         // Play a track using our new device ID
+        setVol();
         play(data.device_id);
     });
 
