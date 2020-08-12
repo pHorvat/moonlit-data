@@ -66,6 +66,8 @@ window.onSpotifyPlayerAPIReady = () => {
     // Connect to the player!
     player.connect();
 
+    document.getElementById("tglBtn").addEventListener("click", togglePly);
+
     function togglePly() {
         player.togglePlay().then(() => {
             console.log('Toggled playback!');
