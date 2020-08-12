@@ -25,9 +25,7 @@ const scopes = [
     'user-modify-playback-state',
     'user-read-email'
 ];
-const verifier ='cfAc8a0B7JE2MN9uilbtKxdYHTvwGqvEbtPOd4r2oXbBy';
-const challenge1 = 'ifIlgzSZIpB0QSOeNQjOB143pWO0xLbhLmuw1I1VKNM';
-const state = 'e21392da45dbf4'
+
 
 // If there is no token, redirect to Spotify authorization
 if (!_token) {
