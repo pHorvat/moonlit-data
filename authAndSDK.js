@@ -27,10 +27,11 @@ const scopes = [
 ];
 const verifier ='cfAc8a0B7JE2MN9uilbtKxdYHTvwGqvEbtPOd4r2oXbBy';
 const challenge1 = 'ifIlgzSZIpB0QSOeNQjOB143pWO0xLbhLmuw1I1VKNM';
+const state = 'e21392da45dbf4'
 
 // If there is no token, redirect to Spotify authorization
 if (!_token) {
-    window.location = `${authEndpoint}?client_id=${clientId}&redirect_uri=${redirectUri}&scope=${scopes.join('%20')}&response_type=token&show_dialog=true`;
+    window.location = `${authEndpoint}?client_id=${clientId}&redirect_uri=${redirectUri}&scope=${scopes.join('%20')}&response_type=token&show_dialog=true&`;
 }
 
 // Set up the Web Playback SDK
