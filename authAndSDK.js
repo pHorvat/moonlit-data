@@ -60,7 +60,7 @@ window.onSpotifyPlayerAPIReady = () => {
         console.log('Ready with Device ID', data.device_id);
 
         // Play a track using our new device ID
-        //play(data.device_id);
+        play(data.device_id);
     });
 
     // Connect to the player!
