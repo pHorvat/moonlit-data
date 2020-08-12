@@ -74,6 +74,26 @@ window.onSpotifyPlayerAPIReady = () => {
         });
     }
 
+    player.getCurrentState().then(state => {
+        if (!state) {
+            console.log('User is not playing music through the Web Playback SDK');
+            document.getElementById("tglBtn").innerHTML = "PLAY!";
+            return;
+        }
+        else{
+            document.getElementById("tglBtn").innerHTML = "STOP!";
+
+        }
+
+        let {
+            current_track,
+            next_tracks: [next_track]
+        } = state.track_window;
+
+        console.log('Currently Playing', current_track);
+        console.log('Playing Next', next_track);
+    });
+
 }
 
 // Play a specified track on the Web Playback SDK's device ID
