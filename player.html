@@ -22,9 +22,10 @@
         <div  class="content">
             <h1>Moonlit Data</h1>
             <p class="major" id="demo">A responsive one-page site for random data</p>
-            <p class="major" id="p1">Current Image</p>
+            <p class="major" >Current Song:</p>
+            <p class="major" style="font-weight: bold" id="crrSong"></p>
             <ul class="actions stacked">
-                <li><button href="#" onclick="loadDoc()"  id="tglBtn" class="button big wide smooth-scroll-middle">PLAY</button></li>
+                <li><button href="#"   id="tglBtn" class="button big wide smooth-scroll-middle">PLAY</button></li>
             </ul>
         </div>
         <div class="image">
@@ -87,6 +88,33 @@
 
         // Connect to the player!
         player.connect();
+
+        player.getCurrentState().then(state => {
+            if (!state) {
+                console.error('User is not playing music through the Web Playback SDK');
+                return;
+            }
+
+            let {
+                current_track,
+                next_tracks: [next_track]
+            } = state.track_window;
+
+            console.log('Currently Playing', current_track);
+            console.log('Playing Next', next_track);
+            document.getElementById("crrSong").innerHTML = current_track;
+        });
+
+        document.getElementById("tglBtn").addEventListener("click", function(){
+            player.togglePlay().then(() => {
+                console.log('Toggled playback!');
+            });
+        });
+
+
+
+
+    //end of Spotify SKD wrap
     };
 
 
