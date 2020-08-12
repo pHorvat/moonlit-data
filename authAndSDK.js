@@ -97,6 +97,22 @@ window.onSpotifyPlayerAPIReady = () => {
 
     });
 
+
+    var slider = document.getElementById("myRange");
+    //var output = document.getElementById("demo");
+    //output.innerHTML = slider.value; // Display the default slider value
+
+// Update the current slider value (each time you drag the slider handle)
+    slider.oninput = function() {
+        //output.innerHTML = this.value;
+        player.setVolume((this.value)/10).then(() => {
+            console.log('Volume updated!');
+        });
+    }
+
+
+
+
 }
 
 // Play a specified track on the Web Playback SDK's device ID
