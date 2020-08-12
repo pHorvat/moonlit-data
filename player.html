@@ -11,6 +11,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     <link rel="stylesheet" href="assets/css/main.css" />
     <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 <body class="is-preload">
 
@@ -91,7 +92,7 @@
 
         player.getCurrentState().then(state => {
             if (!state) {
-                console.error('User is not playing music through the Web Playback SDK');
+                console.log('User is not playing music through the Web Playback SDK');
                 return;
             }
 
@@ -115,7 +116,7 @@
             console.log('Volume updated!');
         });
 
-         //playSong('spotify:album:1Je1IMUlBXcx1Fz0WE7oPT', returnAccToken());
+         playSong('spotify:album:1Je1IMUlBXcx1Fz0WE7oPT', returnAccToken());
 
 
     //end of Spotify SKD wrap
