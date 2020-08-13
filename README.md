@@ -1,3 +1,5 @@
+https://img.shields.io/github/languages/top/phorvat/moonlit-data
+
 # Moonlit Data
 
 Moonlit Data is Github page implementing Spotify API to play music.
