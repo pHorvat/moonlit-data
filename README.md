@@ -1,4 +1,4 @@
-<p align="center">
+<p align="left">
 <img alt="GitHub repo size" src="https://img.shields.io/github/repo-size/phorvat/moonlit-data">
 <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/phorvat/moonlit-data">
 <img alt="GitHub" src="https://img.shields.io/github/license/phorvat/moonlit-data">
@@ -11,7 +11,7 @@ Moonlit Data is Github page implementing Spotify API to play music.
 ## Usage
 
 
-Visit  <a href="https://phorvat.github.io/moonlit-data/" >https://phorvat.github.io/moonlit-data/</a> for usage.
+Visit  <a href="https://phorvat.github.io/moonlit-data/" >https://phorvat.github.io/moonlit-data/ for usage.
 
 You will need a **Spotify Premium** account.
 
