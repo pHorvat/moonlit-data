@@ -9,7 +9,7 @@ Moonlit Data is Github page implementing Spotify API to play music.
 ## Usage
 
 
-Visit  <a href="https://phorvat.github.io/moonlit-data/"  style="font-weight: bold; ">https://phorvat.github.io/moonlit-data/</a> for usage.
+Visit  <a href="https://phorvat.github.io/moonlit-data/" >https://phorvat.github.io/moonlit-data/</a> for usage.
 
 You will need a Spotify Premium account.
 
