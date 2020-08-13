@@ -1,8 +1,4 @@
-https://img.shields.io/github/languages/top/phorvat/moonlit-data
-.. image:: https://img.shields.io/github/languages/top/phorvat/moonlit-data   :alt: GitHub top language
-https://img.shields.io/github/languages/top/phorvat/moonlit-data
-https://img.shields.io/github/repo-size/phorvat/moonlit-data
-https://img.shields.io/github/issues/pHorvat/moonlit-data
+
 <img alt="GitHub repo size" src="https://img.shields.io/github/repo-size/phorvat/moonlit-data">
 # Moonlit Data
 
