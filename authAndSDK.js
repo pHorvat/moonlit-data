@@ -90,7 +90,8 @@ window.onSpotifyPlayerAPIReady = () => {
 
             return;
         }
-
+        document.getElementById("optionalCurrent").style.visibility = "visible";
+        document.getElementById("optionalCurrent2").style.visibility = "visible";
 
         let {
             current_track,
