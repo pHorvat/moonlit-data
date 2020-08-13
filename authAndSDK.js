@@ -85,6 +85,8 @@ window.onSpotifyPlayerAPIReady = () => {
     player.getCurrentState().then(state => {
         if (!state) {
             console.log('User is not playing music through the Web Playback SDK');
+            document.getElementById("optionalCurrent").style.visibility = "hidden";
+            document.getElementById("optionalCurrent2").style.visibility = "hidden";
 
             return;
         }
