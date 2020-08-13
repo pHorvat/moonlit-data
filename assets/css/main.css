@@ -23,7 +23,11 @@ section, summary, time, mark, audio, video {
 	border: 0;
 	font-size: 100%;
 	font: inherit;
-	vertical-align: baseline;}
+	vertical-align: baseline;
+	overflow:   scroll;
+
+}
+
 ::-webkit-scrollbar {
 	width: 0;
 	background: transparent; /* make scrollbar transparent */
