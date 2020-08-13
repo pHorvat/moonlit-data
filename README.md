@@ -1,4 +1,5 @@
 https://img.shields.io/github/languages/top/phorvat/moonlit-data
+.. image:: https://img.shields.io/github/languages/top/phorvat/moonlit-data   :alt: GitHub top language
 
 # Moonlit Data
 
