@@ -1,5 +1,7 @@
 
 <img alt="GitHub repo size" src="https://img.shields.io/github/repo-size/phorvat/moonlit-data">
+<img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/phorvat/moonlit-data">
+
 # Moonlit Data
 
 Moonlit Data is Github page implementing Spotify API to play music.
