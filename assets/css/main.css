@@ -27,11 +27,12 @@ section, summary, time, mark, audio, video {
 	overflow:   scroll;
 
 }
-
+/*
 ::-webkit-scrollbar {
 	width: 0;
-	background: transparent; /* make scrollbar transparent */
+	background: transparent; /* make scrollbar transparent
 }
+*/
 
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
