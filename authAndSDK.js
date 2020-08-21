@@ -51,13 +51,13 @@ window.onSpotifyPlayerAPIReady = () => {
         console.log(state)
         $('#current-track').attr('src', state.track_window.current_track.album.images[2].url);
         $('#current-track-name').text(state.track_window.current_track.name);
-        if(track_window.current_track.artists.length==1){
+        if(state.track_window.current_track.artists.length==1){
             $('#current-track-artist').text(state.track_window.current_track.artists[0].name);
         }
-        else if(track_window.current_track.artists.length==2){
+        else if(state.track_window.current_track.artists.length==2){
             $('#current-track-artist').text(state.track_window.current_track.artists[0].name+", "+state.track_window.current_track.artists[1].name);
         }
-        else if(track_window.current_track.artists.length==2){
+        else if(state.track_window.current_track.artists.length==2){
             $('#current-track-artist').text(state.track_window.current_track.artists[0].name+", "+state.track_window.current_track.artists[1].name+", "+state.track_window.current_track.artists[2].name);
 
         }
