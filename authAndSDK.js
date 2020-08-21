@@ -51,7 +51,7 @@ window.onSpotifyPlayerAPIReady = () => {
         console.log(state)
         $('#current-track').attr('src', state.track_window.current_track.album.images[2].url);
         $('#current-track-name').text(state.track_window.current_track.name);
-        if(state.track_window.current_track.artists.length==1){
+        /*if(state.track_window.current_track.artists.length==1){
             $('#current-track-artist').text(state.track_window.current_track.artists[0].name);
         }
         else if(state.track_window.current_track.artists.length==2){
@@ -59,8 +59,14 @@ window.onSpotifyPlayerAPIReady = () => {
         }
         else if(state.track_window.current_track.artists.length==2){
             $('#current-track-artist').text(state.track_window.current_track.artists[0].name+", "+state.track_window.current_track.artists[1].name+", "+state.track_window.current_track.artists[2].name);
-
+        }*/
+        var i=0;
+        var aristsArr;
+        while(state.track_window.current_track.artists.length!=i){
+           aristsArr=aristsArr+state.track_window.current_track.artists[i].name;
+           i++;
         }
+        $('#current-track-artist').text(aristsArr.join(", "));
 
         document.getElementById("optionalCurrent").style.visibility = "visible";
         document.getElementById("optionalCurrent2").style.visibility = "visible";
