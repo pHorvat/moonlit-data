@@ -61,9 +61,9 @@ window.onSpotifyPlayerAPIReady = () => {
             $('#current-track-artist').text(state.track_window.current_track.artists[0].name+", "+state.track_window.current_track.artists[1].name+", "+state.track_window.current_track.artists[2].name);
         }*/
         var i=0;
-        var artistsArr;
+        let artistsArr=[];
         while(state.track_window.current_track.artists.length!=i){
-           artistsArr=artistsArr+state.track_window.current_track.artists[i].name;
+           artistsArr[i]=state.track_window.current_track.artists[i].name;
            i++;
         }
         var artistsJoined = artistsArr.join();
