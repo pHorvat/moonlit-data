@@ -51,7 +51,7 @@ window.onSpotifyPlayerAPIReady = () => {
         console.log(state)
         $('#current-track').attr('src', state.track_window.current_track.album.images[2].url);
         $('#current-track-name').text(state.track_window.current_track.name);
-        $('#current-track-artist').text(state.track_window.current_track.artists[0].name);
+        $('#current-track-artist').text(state.track_window.current_track.artists[0].name+", "+state.track_window.current_track.artists[1].name+","+state.track_window.current_track.artists[2].name);
         document.getElementById("optionalCurrent").style.visibility = "visible";
         document.getElementById("optionalCurrent2").style.visibility = "visible";
         if(state.paused===true){
