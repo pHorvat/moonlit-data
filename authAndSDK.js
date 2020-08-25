@@ -66,7 +66,7 @@ window.onSpotifyPlayerAPIReady = () => {
             document.getElementById("tglBtn").innerHTML = "PLAY <i class=\"fas fa-play\"></i>";
         }
         else {
-            document.getElementById("tglBtn").innerHTML = "STOP";
+            document.getElementById("tglBtn").innerHTML = "STOP <i class=\"fas fa-pause\"></i>";
         }
 
     });
