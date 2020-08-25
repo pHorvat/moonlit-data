@@ -140,8 +140,6 @@ var SpotifyURIs = [
     "spotify:track:2Nv0zFXjH4tYS7O1OGpvt7",
     "spotify:track:4qDHt2ClApBBzDAvhNGWFd",
     "spotify:track:118vbJqycPASVgrYnCzb9F",
-    "spotify:playlist:7ozIozDp260fjNOZy1yzRG"
-
 ]
 
 var selectedURI = SpotifyURIs[Math.floor(Math.random()*SpotifyURIs.length)];
@@ -153,7 +151,7 @@ function play(device_id) {
     $.ajax({
         url: "https://api.spotify.com/v1/me/player/play?device_id=" + device_id,
         type: "PUT",
-        data: '{"uris": ['+tempURI+']}',
+        data: '{"uris": ['+selectedURI+']}',
         beforeSend: function(xhr){xhr.setRequestHeader('Authorization', 'Bearer ' + _token );},
         success: function(data) {
             console.log(data)
