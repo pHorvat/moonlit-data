@@ -137,17 +137,21 @@ var SpotifyURIs = [
     "spotify:track:61ZM92T2zaXIVsqncThQzC",
     "spotify:track:4XdaaDFE881SlIaz31pTAG",
     "spotify:track:4LpqyPjeGvDbeHthlyk7xa",
-    "spotify:track:2Nv0zFXjH4tYS7O1OGpvt7"
+    "spotify:track:2Nv0zFXjH4tYS7O1OGpvt7",
+    "spotify:track:4qDHt2ClApBBzDAvhNGWFd",
+    "spotify:track:118vbJqycPASVgrYnCzb9F",
+    "spotify:playlist:7ozIozDp260fjNOZy1yzRG"
 
 ]
 
 var selectedURI = SpotifyURIs[Math.floor(Math.random()*SpotifyURIs.length)];
+selectedURI = '"'+selectedURI+'"';
 // Play a specified track on the Web Playback SDK's device ID
 function play(device_id) {
     $.ajax({
         url: "https://api.spotify.com/v1/me/player/play?device_id=" + device_id,
         type: "PUT",
-        data: '{"uris": ['+'"'+selectedURI+'"'+']}',
+        data: '{"uris": ['+selectedURI+']}',
         beforeSend: function(xhr){xhr.setRequestHeader('Authorization', 'Bearer ' + _token );},
         success: function(data) {
             console.log(data)
