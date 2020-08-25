@@ -63,7 +63,7 @@ window.onSpotifyPlayerAPIReady = () => {
         document.getElementById("optionalCurrent").style.visibility = "visible";
         document.getElementById("optionalCurrent2").style.visibility = "visible";
         if(state.paused===true){
-            document.getElementById("tglBtn").innerHTML = "PLAY";
+            document.getElementById("tglBtn").innerHTML = "PLAY <i class=\"fas fa-play\"></i>";
         }
         else {
             document.getElementById("tglBtn").innerHTML = "STOP";
