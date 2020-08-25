@@ -131,6 +131,14 @@ window.onSpotifyPlayerAPIReady = () => {
         });
     }
 
+    setInterval(function(){
+        player.getVolume().then(volume => {
+            let volume_percentage = volume * 100;
+            console.log(`The volume of the player is ${volume_percentage}%`);
+            document.getElementById("myRange").value = volume_percentage;
+        });
+    }, 3000);
+
 }
 var SpotifyURIs = [
     "spotify:track:7FCG2wIYG1XvGRUMACC2cD",
