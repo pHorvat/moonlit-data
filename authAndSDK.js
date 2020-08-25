@@ -165,5 +165,6 @@ function play(device_id) {
 document.getElementById("nxtBtn").addEventListener("click", nextSong);
 function nextSong(){
     selectedURI = SpotifyURIs[Math.floor(Math.random()*SpotifyURIs.length)];
+    selectedURI = '"'+selectedURI+'"';
     play(devID);
 }
