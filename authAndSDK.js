@@ -79,7 +79,7 @@ window.onSpotifyPlayerAPIReady = () => {
         // Play a track using our new device ID
 
         play(data.device_id);
-        //setVol();
+        setVol();
         devID=data.device_id;
     });
 
