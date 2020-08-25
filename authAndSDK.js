@@ -33,6 +33,7 @@ if (!_token) {
 }
 
 // Set up the Web Playback SDK
+var devID;
 
 window.onSpotifyPlayerAPIReady = () => {
     const player = new Spotify.Player({
@@ -78,7 +79,8 @@ window.onSpotifyPlayerAPIReady = () => {
         // Play a track using our new device ID
 
         play(data.device_id);
-        setVol();
+        //setVol();
+        devID=data.device_id;
     });
 
     // Connect to the player!
@@ -158,4 +160,10 @@ function play(device_id) {
 
         }
     });
+}
+
+document.getElementById("nxtBtn").addEventListener("click", nextSong);
+function nextSong(){
+    selectedURI = SpotifyURIs[Math.floor(Math.random()*SpotifyURIs.length)];
+    play(devID);
 }
