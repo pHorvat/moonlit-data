@@ -8652,5 +8652,10 @@ input, select, textarea {
 	cursor: pointer;
 }
 
+@media screen and (max-width: 900px) {
+	#tglBtn{
+		margin-right: 0;
+	}
+}
 
 
