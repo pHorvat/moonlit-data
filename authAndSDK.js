@@ -141,14 +141,18 @@ window.onSpotifyPlayerAPIReady = () => {
 
     document.getElementById("nxtBtn").addEventListener("click", nextSong);
     function nextSong(){
+
         player.nextTrack().then(() => {
+            reset_animation();
             console.log('Skipped to next track!');
-            var me = this;
-            this.style.webkitAnimation = 'none';
-            setTimeout(function() {
-                me.style.webkitAnimation = '';
-            }, 10);
+            function reset_animation() {
+                var el = document.getElementById('current-track');
+                el.style.animation = 'none';
+                el.offsetHeight; /* trigger reflow */
+                el.style.animation = null;
+            }
         });
+
     }
 
 
