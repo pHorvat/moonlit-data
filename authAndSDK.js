@@ -163,10 +163,7 @@ var SpotifyURIs = [
     "spotify:track:57724RmJKfjECtItkTmVZI"
 ]
 
-var selectedURI = SpotifyURIs[Math.floor(Math.random()*SpotifyURIs.length)];
-selectedURI = '"'+selectedURI+'"';
-var tempURI = "spotify:playlist:7ozIozDp260fjNOZy1yzRG";
-tempURI = '"'+tempURI+'"';
+
 // Play a specified track on the Web Playback SDK's device ID
 function play(device_id) {
     $.ajax({
@@ -180,11 +177,3 @@ function play(device_id) {
         }
     });
 }
-/*
-document.getElementById("nxtBtn").addEventListener("click", nextSong);
-function nextSong(){
-    selectedURI = SpotifyURIs[Math.floor(Math.random()*SpotifyURIs.length)];
-    selectedURI = '"'+selectedURI+'"';
-    play(devID);
-}
-*/
