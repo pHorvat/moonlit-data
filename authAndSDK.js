@@ -150,6 +150,9 @@ var SpotifyURIs = [
     "spotify:track:2Nv0zFXjH4tYS7O1OGpvt7",
     "spotify:track:4qDHt2ClApBBzDAvhNGWFd",
     "spotify:track:118vbJqycPASVgrYnCzb9F",
+    "spotify:track:55dTgpMdgmZoWUxXtJwGve",
+    "spotify:track:30OzfackGMWBpHsRpvtAq6",
+    "spotify:track:57724RmJKfjECtItkTmVZI"
 ]
 
 var selectedURI = SpotifyURIs[Math.floor(Math.random()*SpotifyURIs.length)];
