@@ -143,6 +143,11 @@ window.onSpotifyPlayerAPIReady = () => {
     function nextSong(){
         player.nextTrack().then(() => {
             console.log('Skipped to next track!');
+            var me = this;
+            this.style.webkitAnimation = 'none';
+            setTimeout(function() {
+                me.style.webkitAnimation = '';
+            }, 10);
         });
     }
 
