@@ -137,7 +137,7 @@ window.onSpotifyPlayerAPIReady = () => {
             console.log(`The volume of the player is ${volume_percentage}%`);
             document.getElementById("myRange").value = volume_percentage;
         });
-    }, 3000);
+    }, 5000);
 
     document.getElementById("nxtBtn").addEventListener("click", nextSong);
     function nextSong(){
