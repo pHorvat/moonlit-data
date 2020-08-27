@@ -139,6 +139,14 @@ window.onSpotifyPlayerAPIReady = () => {
         });
     }, 3000);
 
+    document.getElementById("nxtBtn").addEventListener("click", nextSong);
+    function nextSong(){
+        player.nextTrack().then(() => {
+            console.log('Skipped to next track!');
+        });
+    }
+
+
 }
 var SpotifyURIs = [
     "spotify:track:7FCG2wIYG1XvGRUMACC2cD",
@@ -172,10 +180,11 @@ function play(device_id) {
         }
     });
 }
-
+/*
 document.getElementById("nxtBtn").addEventListener("click", nextSong);
 function nextSong(){
     selectedURI = SpotifyURIs[Math.floor(Math.random()*SpotifyURIs.length)];
     selectedURI = '"'+selectedURI+'"';
     play(devID);
 }
+*/
