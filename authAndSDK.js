@@ -140,17 +140,19 @@ window.onSpotifyPlayerAPIReady = () => {
     }, 5000);
 
     document.getElementById("nxtBtn").addEventListener("click", nextSong);
-    function nextSong(){
 
+    function nextSong(){
+        reset_animation();
+        function reset_animation() {
+            var el = document.getElementById('current-track');
+            el.style.animation = 'none';
+            el.offsetHeight; /* trigger reflow */
+            el.style.animation = null;
+        }
         player.nextTrack().then(() => {
-            reset_animation();
+
             console.log('Skipped to next track!');
-            function reset_animation() {
-                var el = document.getElementById('current-track');
-                el.style.animation = 'none';
-                el.offsetHeight; /* trigger reflow */
-                el.style.animation = null;
-            }
+
         });
 
     }
