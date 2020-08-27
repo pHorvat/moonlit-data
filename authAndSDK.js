@@ -51,7 +51,7 @@ window.onSpotifyPlayerAPIReady = () => {
     player.on('player_state_changed', state => {
         console.log(state)
         const element = document.querySelector('#current-track');
-        element.classList.add('animate__animated', 'animate__bounceOutLeft');
+        element.classList.add('animate__animated', 'animate__fadeInRight');
         $('#current-track').attr('src', state.track_window.current_track.album.images[2].url);
         $('#current-track-name').text(state.track_window.current_track.name);
         var i=0;
