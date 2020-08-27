@@ -3584,7 +3584,7 @@ input, select, textarea {
 					width: 100%;
 					max-width: 100%;
 					height: 45vh;
-					box-shadow: 100px 0 #222222 inset;
+					box-shadow: 0 0 10px 10px #222222 inset;
 				}
 
 		}
