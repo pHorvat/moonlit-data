@@ -189,7 +189,7 @@ function play(device_id) {
     });
 
     $.ajax({
-        url: "https://api.spotify.com/v1/me/player/shuffle?device_id=" + device_id,
+        url: "https://api.spotify.com/v1/me/player/shuffle",
         type: "PUT",
         data: '{"state": [true]}',
         beforeSend: function(xhr){xhr.setRequestHeader('Authorization', 'Bearer ' + _token );},
