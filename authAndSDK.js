@@ -81,7 +81,7 @@ window.onSpotifyPlayerAPIReady = () => {
         play(data.device_id);
         setVol();
         devID=data.device_id;
-        suffle(data.device_id);
+        setTimeout( suffle(data.device_id),5000);
     });
 
     // Connect to the player!
