@@ -81,7 +81,7 @@ window.onSpotifyPlayerAPIReady = () => {
         play(data.device_id);
         setVol();
         devID=data.device_id;
-        suffle();
+        suffle(data.device_id);
     });
 
     // Connect to the player!
@@ -189,7 +189,7 @@ function play(device_id) {
         }
     });
 }
-function suffle() {
+function suffle(device_id) {
     $.ajax({
         url: "https://api.spotify.com/v1/me/player/shuffle?state=true&device_id=" + device_id,
         type: "PUT",
