@@ -189,9 +189,9 @@ function play(device_id) {
     });
 
     $.ajax({
-        url: "https://api.spotify.com/v1/me/player/shuffle",
+        url: "https://api.spotify.com/v1/me/player/shuffle?state=true",
         type: "PUT",
-        data: '{state: true}',
+        data: '',
         beforeSend: function(xhr){xhr.setRequestHeader('Authorization', 'Bearer ' + _token );},
         success: function(data) {
             console.log(data)
