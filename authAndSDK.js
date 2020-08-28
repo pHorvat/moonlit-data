@@ -81,6 +81,7 @@ window.onSpotifyPlayerAPIReady = () => {
         play(data.device_id);
         setVol();
         devID=data.device_id;
+        suffle();
     });
 
     // Connect to the player!
@@ -187,18 +188,22 @@ function play(device_id) {
 
         }
     });
-
+}
+function suffle() {
     $.ajax({
-        url: "https://api.spotify.com/v1/me/player/shuffle?state=true&device_id="+device_id,
+        url: "https://api.spotify.com/v1/me/player/shuffle?state=true&device_id=" + device_id,
         type: "PUT",
         data: '',
-        beforeSend: function(xhr){xhr.setRequestHeader('Authorization', 'Bearer ' + _token );},
-        success: function(data) {
+        beforeSend: function (xhr) {
+            xhr.setRequestHeader('Authorization', 'Bearer ' + _token);
+        },
+        success: function (data) {
             console.log(data)
 
         }
     });
-
-
-
 }
+
+
+
+
