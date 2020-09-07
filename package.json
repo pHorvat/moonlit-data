@@ -1,8 +1,0 @@
-{
-  "name": "moonlit-data",
-  "version": "1.0.0",
-  "dependencies": {},
-  "devDependencies": {
-    "axios": "^0.20.0"
-  }
-}
