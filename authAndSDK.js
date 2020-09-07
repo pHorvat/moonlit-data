@@ -204,14 +204,6 @@ function suffle(device_id) {
          state: 'true',
          device_id: device_id
         },
-        headers: {  //'X-Requested-With': 'XMLHttpRequest',
-            'Autorization': 'Bearer ' + _token
-        },
-
-       /* auth: {
-            Autorization: 'Bearer '+ _token
-        },  */
-
     });
 
 }
