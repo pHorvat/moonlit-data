@@ -212,7 +212,7 @@ function suffle(device_id) {
     });
 
     /*
-    
+
    $.ajax({
         url: "https://api.spotify.com/v1/me/player/shuffle?state=true&device_id=" + device_id,
         type: "PUT",
