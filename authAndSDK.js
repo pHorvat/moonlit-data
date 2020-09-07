@@ -193,6 +193,20 @@ function play(device_id) {
 
         }
     });
+
+    axios({
+        method: 'put',
+        url: 'https://api.spotify.com/v1/me/player/play',
+        params{
+            'device_id': device_id
+        },
+        data{
+            'uris': SpotifyURIs.join()
+        },
+        headers: {
+            'Authorization': 'Bearer '+ _token
+        }
+    })
 }
 
 
