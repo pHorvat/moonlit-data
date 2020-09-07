@@ -204,14 +204,12 @@ function suffle(device_id) {
         data: {
          state: 'true',
          device_id: device_id
-        }
+        },
         auth{
             Autorization: _token
         },
 
     });
-
-
 
 }
 
