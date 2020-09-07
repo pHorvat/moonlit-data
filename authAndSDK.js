@@ -197,7 +197,6 @@ function play(device_id) {
 
 
 function suffle(device_id) {
-    const axios = require('axios');
     axios({
         method: 'put',
         url: 'https://api.spotify.com/v1/me/player/shuffle\n',
