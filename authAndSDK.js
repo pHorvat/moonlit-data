@@ -204,6 +204,9 @@ function suffle(device_id) {
          state: 'true',
          device_id: device_id
         },
+        headers: {
+            'Authorization': `token ${_token}`
+        }
     });
 
 }
