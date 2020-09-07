@@ -203,7 +203,7 @@ function suffle(device_id) {
         url: 'https://api.spotify.com/v1/me/player/shuffle\n',
         data: {
          state: 'true',
-         device_id: devID
+         device_id: device_id
         }
         auth{
             Autorization: _token
