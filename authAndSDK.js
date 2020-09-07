@@ -1,6 +1,6 @@
 // Get the hash of the url
 
-const axios = require('axios').default;
+
 
 const hash = window.location.hash
     .substring(1)
