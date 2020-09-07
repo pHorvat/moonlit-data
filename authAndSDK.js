@@ -1,4 +1,7 @@
 // Get the hash of the url
+
+const axios = require('axios').default;
+
 const hash = window.location.hash
     .substring(1)
     .split('&')
@@ -191,8 +194,26 @@ function play(device_id) {
         }
     });
 }
+
+
 function suffle(device_id) {
-    $.ajax({
+    const axios = require('axios');
+    axios({
+        method: 'put',
+        url: 'https://api.spotify.com/v1/me/player/shuffle\n',
+        data: {
+         state: 'true',
+         device_id: devID
+        }
+        auth{
+            Autorization: _token
+        },
+
+    });
+
+    /*
+    
+   $.ajax({
         url: "https://api.spotify.com/v1/me/player/shuffle?state=true&device_id=" + device_id,
         type: "PUT",
         data: '',
@@ -203,7 +224,8 @@ function suffle(device_id) {
             console.log(data)
 
         }
-    });
+    });  */
+
 }
 
 
