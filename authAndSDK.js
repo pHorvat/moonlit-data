@@ -205,7 +205,7 @@ function suffle(device_id) {
          device_id: device_id
         },
         auth: {
-            Autorization: _token
+            Autorization: Bearer _token
         },
 
     });
