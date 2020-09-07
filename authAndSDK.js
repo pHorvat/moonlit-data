@@ -183,7 +183,7 @@ var SpotifyURIs = [
 
 // Play a specified track on the Web Playback SDK's device ID
 function play(device_id) {
-    $.ajax({
+   /* $.ajax({
         url: "https://api.spotify.com/v1/me/player/play?device_id=" + device_id,
         type: "PUT",
         data: '{"uris": ['+'"'+SpotifyURIs.join('","')+'"'+']}',
@@ -192,15 +192,15 @@ function play(device_id) {
             console.log(data)
 
         }
-    });
+    });  */
 
     axios({
         method: 'put',
         url: 'https://api.spotify.com/v1/me/player/play',
-        params{
+        params:{
             'device_id': device_id
         },
-        data{
+        data:{
             'uris': SpotifyURIs.join()
         },
         headers: {
