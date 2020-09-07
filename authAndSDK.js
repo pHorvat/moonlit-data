@@ -201,8 +201,8 @@ function suffle(device_id) {
         method: 'put',
         url: 'https://api.spotify.com/v1/me/player/shuffle\n',
         data: {
-         state: 'true',
-         device_id: device_id
+         'state': 'true',
+         'device_id': device_id
         },
         headers: {
             'Authorization': `Bearer ${_token}`
