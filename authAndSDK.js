@@ -205,7 +205,7 @@ function suffle(device_id) {
          'device_id': device_id
         },
         headers: {
-            'Authorization': 'Bearer '+${_token}
+            'Authorization': 'Bearer '+ _token
         }
     })  .then(function (response) {
         //console.log(response.data);
