@@ -202,7 +202,8 @@ function play(device_id) {
             'uris': joinURIs()
         },
         headers: {
-            'Authorization': 'Bearer '+ _token
+            'Authorization': 'Bearer '+ _token,
+            'Content-Type': 'application/json'
         }
     })
 }
