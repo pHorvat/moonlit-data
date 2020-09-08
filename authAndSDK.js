@@ -199,7 +199,7 @@ function play(device_id) {
             'device_id': device_id
         },
         data:{
-            'uris': joinURIs()
+            '{uris': joinURIs() + '}'
         },
         headers: {
             'Authorization': 'Bearer '+ _token,
