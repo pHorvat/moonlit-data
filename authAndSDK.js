@@ -182,7 +182,7 @@ var SpotifyURIs = [
 
 function joinURIs(){
     var temp;
-    temp = '"' + SpotifyURIs.join('","') + '"';
+    temp =  SpotifyURIs.join('","');
 
 
     return temp;
