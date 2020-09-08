@@ -201,7 +201,7 @@ function play(device_id) {
 
         }
     });
-
+/*
     axios({
         method: 'put',
         url: 'https://api.spotify.com/v1/me/player/play',
@@ -214,7 +214,7 @@ function play(device_id) {
         headers: {
             'Authorization': 'Bearer '+ _token
         }
-    })
+    }) */
 }
 
 
