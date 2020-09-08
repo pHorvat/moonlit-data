@@ -191,6 +191,7 @@ function joinURIs(){
 
 // Play a specified track on the Web Playback SDK's device ID
 function play(device_id) {
+    joinURIs();
     $.ajax({
         url: "https://api.spotify.com/v1/me/player/play?device_id=" + device_id,
         type: "PUT",
