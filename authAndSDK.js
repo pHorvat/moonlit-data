@@ -180,13 +180,7 @@ var SpotifyURIs = [
     "spotify:track:57724RmJKfjECtItkTmVZI"
 ]
 
-function joinURIs(){
-    var temp;
-    temp =  SpotifyURIs.join('","');
 
-
-    return temp;
-}
 
 
 // Play a specified track on the Web Playback SDK's device ID
@@ -199,7 +193,7 @@ function play(device_id) {
             'device_id': device_id
         },
         data:{
-            '{uris': joinURIs() + '}'
+            'uris': SpotifyURIs.join('","')
         },
         headers: {
             'Authorization': 'Bearer '+ _token,
