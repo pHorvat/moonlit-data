@@ -180,6 +180,14 @@ var SpotifyURIs = [
     "spotify:track:57724RmJKfjECtItkTmVZI"
 ]
 
+function joinURIs(){
+    var temp;
+    temp = '"' + SpotifyURIs.join('","') + '"';
+
+    console.log(temp);
+    return temp;
+}
+
 
 // Play a specified track on the Web Playback SDK's device ID
 function play(device_id) {
@@ -193,7 +201,7 @@ function play(device_id) {
 
         }
     });
-/*
+
     axios({
         method: 'put',
         url: 'https://api.spotify.com/v1/me/player/play',
@@ -201,12 +209,12 @@ function play(device_id) {
             'device_id': device_id
         },
         data:{
-            'uris': SpotifyURIs.join()
+            'uris': joinURIs()
         },
         headers: {
             'Authorization': 'Bearer '+ _token
         }
-    })*/
+    })
 }
 
 
@@ -231,8 +239,8 @@ function suffle(device_id) {
 
 }
 
-/*
 
+/*
 $.ajax({
      url: "https://api.spotify.com/v1/me/player/shuffle?state=true&device_id=" + device_id,
      type: "PUT",
@@ -244,8 +252,8 @@ $.ajax({
          console.log(data)
 
      }
- });  */
-
+ });
+*/
 
 
 
