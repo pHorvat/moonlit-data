@@ -193,7 +193,7 @@ function play(device_id) {
             'device_id': device_id
         },
         data:{
-            '"uris"': 'spotify:track:57724RmJKfjECtItkTmVZI'
+            'uris': '[spotify:track:57724RmJKfjECtItkTmVZI]'
         },
         headers: {
             'Authorization': 'Bearer '+ _token,
