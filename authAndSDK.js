@@ -181,7 +181,8 @@ var SpotifyURIs = [
 ]
 
 
-console.log(JSON.stringify({uris: SpotifyURIs}));
+
+var joinedURIS = JSON.stringify({uris: SpotifyURIs});
 
 // Play a specified track on the Web Playback SDK's device ID
 function play(device_id) {
@@ -193,7 +194,7 @@ function play(device_id) {
             'device_id': device_id
         },
         data:{
-            'uris': SpotifyURIs.join()
+            joinedURIS;
         },
         headers: {
             'Authorization': 'Bearer '+ _token,
