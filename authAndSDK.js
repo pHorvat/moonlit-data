@@ -90,8 +90,14 @@ window.onSpotifyPlayerAPIReady = () => {
         devID=data.device_id;
         setTimeout(function (){
             play(data.device_id);
-            suffle(data.device_id)
         } ,100);
+        setTimeout(function (){
+            suffle(data.device_id)
+        } ,500);
+
+
+
+
     });
 
     // Connect to the player!
