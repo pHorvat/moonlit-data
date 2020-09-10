@@ -38,7 +38,7 @@ if (!_token) {
 // Set up the Web Playback SDK
 var devID;
 
-setTimeout(function (){
+
 
 
 
@@ -91,7 +91,7 @@ window.onSpotifyPlayerAPIReady = () => {
         setTimeout(function (){
             play(data.device_id);
             suffle(data.device_id)
-        } ,500);
+        } ,100);
     });
 
     // Connect to the player!
@@ -170,7 +170,7 @@ window.onSpotifyPlayerAPIReady = () => {
 
 
 }
-} ,300);
+
 var SpotifyURIs = [
     "spotify:track:7FCG2wIYG1XvGRUMACC2cD",
     "spotify:track:5WnPPuttuxYw0jyFnQYpcp",
