@@ -194,7 +194,7 @@ function play(device_id) {
             'device_id': device_id
         },
         data:{
-            JSON.stringify({uris: SpotifyURIs})
+           'uris':SpotifyURIs
         },
         headers: {
             'Authorization': 'Bearer '+ _token,
