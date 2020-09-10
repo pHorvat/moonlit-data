@@ -38,6 +38,10 @@ if (!_token) {
 // Set up the Web Playback SDK
 var devID;
 
+setTimeout(function (){
+
+
+
 window.onSpotifyPlayerAPIReady = () => {
     const player = new Spotify.Player({
         name: 'Moonlit Web Player',
@@ -166,6 +170,7 @@ window.onSpotifyPlayerAPIReady = () => {
 
 
 }
+} ,300);
 var SpotifyURIs = [
     "spotify:track:7FCG2wIYG1XvGRUMACC2cD",
     "spotify:track:5WnPPuttuxYw0jyFnQYpcp",
