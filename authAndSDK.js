@@ -81,12 +81,13 @@ window.onSpotifyPlayerAPIReady = () => {
 
         // Play a track using our new device ID
 
-        play(data.device_id);
+
         setVol();
         devID=data.device_id;
         setTimeout(function (){
+            play(data.device_id);
             suffle(data.device_id)
-        } ,2000);
+        } ,500);
     });
 
     // Connect to the player!
