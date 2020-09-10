@@ -194,7 +194,7 @@ function play(device_id) {
             'device_id': device_id
         },
         data:{
-            joinedURIS;
+            joinedURIS
         },
         headers: {
             'Authorization': 'Bearer '+ _token,
