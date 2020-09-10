@@ -206,7 +206,7 @@ function play(device_id) {
         },
         headers: {
             'Authorization': 'Bearer '+ _token,
-            'Content-Type': 'application/json'
+            //'Content-Type': 'application/json'
         }
     })
 }
