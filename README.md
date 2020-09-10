@@ -22,6 +22,3 @@ The authorization is processed though Implicit Grant Flow, for more information 
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
 
-## TODO
-Animate.css \
-https://github.com/public-apis/public-apis
