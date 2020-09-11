@@ -253,7 +253,9 @@ function requestArists(){
     axios({
         method: 'get',
         url: 'https://api.spotify.com/v1/artists',
-        params: artistsIDs.uri,
+        params: {
+            'ids': artistsIDs.uri
+        },
         headers: {
             'Authorization': 'Bearer '+ _token
         }
