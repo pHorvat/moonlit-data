@@ -312,7 +312,7 @@ function requestArists(tempIDs){
         document.getElementById("artistLink"+1).addEventListener("click", artistImage);
 
         function artistImage(){
-            $('#current-track').attr('src', response.data.artists[0].images[0]);
+            $('#current-track').attr('src', response.data.artists[0].images[0].url);
         }
 
     })
