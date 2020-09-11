@@ -271,17 +271,17 @@ function requestArists(tempIDs){
             'Authorization': 'Bearer '+ _token
         }
     }).then(function (response){
-        console.log(response)
+        var artistData = response;
         //console.log(response.config);
 
         let i =0;
         while (IDs.length !== i) {
 
             var a = document.createElement('a');
-            var link = document.createTextNode(response.data.artists[0].name);
+            var link = document.createTextNode(artistData.data.artists[0].name);
             a.appendChild(link);
             //a.title = artistsArr[i];
-            a.href = response.artists[0].external_urls.spotify;
+            a.href = artistData.artists[0].external_urls.spotify;
             const artistLink = document.getElementById("current-track-artist");
             var parentDiv = document.getElementById("parentElement");
             parentDiv.insertBefore(a, artistLink.nextSibling);
