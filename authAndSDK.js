@@ -71,7 +71,7 @@ window.onSpotifyPlayerAPIReady = () => {
             a.appendChild(link);
             a.title = state.track_window.current_track.artists[i].name;
             a.href = state.track_window.current_track.artists[i].uri;
-            document.body.insertBefore(artistLink, a);
+            document.body.insertAdjacentText(artistLink, a);
 
         }
         //var artistsJoined = artistsArr.join(', ');
