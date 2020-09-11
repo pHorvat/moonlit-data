@@ -274,18 +274,16 @@ function requestArists(tempIDs){
         var artistData = response;
         console.log(artistData);
         //console.log(response.config);
-     
+
             let r = 0;
             while (r !== 5) {
                 var el = document.getElementById('artistLink' + r);
                 if (el !== null) {
-                    el.remove();
+                    document.getElementById('artistLink' + r).remove();
                     console.log("Deleting id " + r)
                 } // Removes the div with the 'div-02' id
                 r++;
-                el = 0;
-                setTimeout(function () {
-                }, 10);
+
             }
 
 
