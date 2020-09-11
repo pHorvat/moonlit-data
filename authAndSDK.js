@@ -225,8 +225,12 @@ function play(device_id) {
             'Authorization': 'Bearer '+ _token,
             //'Content-Type': 'application/json'
         }
+    }).then(function (response){
+        requestArists();   
+
+
     })
-    requestArists();
+
 }
 
 
@@ -258,7 +262,7 @@ function requestArists(tempIDs){
     console.log(tempIDs);
     while (tempIDs.length !== i){
         console.log('TEST123');
-        var temp = tempIDs[i].uri.split(':');
+        var temp = tempIDs[i].split(':');
         IDs[i]=temp[2];
         console.log(IDs[i]);
         i++;
