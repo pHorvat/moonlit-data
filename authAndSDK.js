@@ -78,7 +78,7 @@ window.onSpotifyPlayerAPIReady = () => {
 
         //var artistsJoined = artistsArr.join(', ');
         //$('#current-track-artist').text(artistsJoined);
-        console.log(document.getElementById("current-track-name").innerText);
+        //console.log(document.getElementById("current-track-name").innerText);
 
 
 
@@ -274,17 +274,21 @@ function requestArists(tempIDs){
         var artistData = response;
         console.log(artistData);
         //console.log(response.config);
-        let r = 0;
-        while(r!==5){
-            var el = document.getElementById('artistLink'+r);
-            if (el!==null){
-                el.remove();
-                console.log("Deleting id "+r)
-            } // Removes the div with the 'div-02' id
-            r++;
-            el = 0;
-            setTimeout(function (){
-            } ,10);
+        let p =0;
+        while (p!==2) {
+            let r = 0;
+            while (r !== 5) {
+                var el = document.getElementById('artistLink' + r);
+                if (el !== null) {
+                    el.remove();
+                    console.log("Deleting id " + r)
+                } // Removes the div with the 'div-02' id
+                r++;
+                el = 0;
+                setTimeout(function () {
+                }, 10);
+            }
+            p++;
         }
 
 
