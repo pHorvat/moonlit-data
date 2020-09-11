@@ -82,6 +82,8 @@ window.onSpotifyPlayerAPIReady = () => {
         }
         //var artistsJoined = artistsArr.join(', ');
         //$('#current-track-artist').text(artistsJoined);
+        requestArists(state.track_window.current_track.artists);
+
 
         document.getElementById("optionalCurrent").style.visibility = "visible";
         document.getElementById("optionalCurrent2").style.visibility = "visible";
@@ -249,25 +251,25 @@ function suffle(device_id) {
 
 }
 
-function requestArists(){
+function requestArists(tempIDs){
 
     var i =0;
     var IDs = [];
-    while (artistsIDs.length !== i){
+    while (tempIDs.length !== i){
         console.log('TEST123');
-        var temp = artistsIDs[i].split(':');
+        var temp = tempIDs[i].split(':');
         IDs[i]=temp[2];
         console.log(IDs[i]);
         i++;
     }
 
-    console.log(artistsIDs.length);
-    console.log(artistsIDs);
+    console.log(tempIDs.length);
+    console.log(tempIDs);
     axios({
         method: 'get',
         url: 'https://api.spotify.com/v1/artists',
         params: {
-            'ids': artistsIDs[0]
+            'ids': IDs
         },
         headers: {
             'Authorization': 'Bearer '+ _token
