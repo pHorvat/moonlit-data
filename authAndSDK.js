@@ -226,11 +226,10 @@ function play(device_id) {
             //'Content-Type': 'application/json'
         }
     }).then(function (response){
-        requestArists();
+
 
 
     })
-
 }
 
 
@@ -274,7 +273,7 @@ function requestArists(tempIDs){
         method: 'get',
         url: 'https://api.spotify.com/v1/artists',
         params: {
-            'ids': IDs
+            'ids': IDs.join()
         },
         headers: {
             'Authorization': 'Bearer '+ _token
