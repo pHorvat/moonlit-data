@@ -226,7 +226,7 @@ function play(device_id) {
             //'Content-Type': 'application/json'
         }
     }).then(function (response){
-        requestArists();   
+        requestArists();
 
 
     })
