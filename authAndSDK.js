@@ -250,6 +250,15 @@ function suffle(device_id) {
 }
 
 function requestArists(){
+
+    var i =0;
+    var IDs = [];
+    while (artistsIDs.length){
+        var temp = artistsIDs[i].split(':');
+        IDs[i]=temp[2];
+        console.log(IDs[i]);
+    }
+
     console.log(artistsIDs);
     axios({
         method: 'get',
