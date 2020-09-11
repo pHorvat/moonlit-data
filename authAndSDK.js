@@ -253,10 +253,11 @@ function requestArists(){
 
     var i =0;
     var IDs = [];
-    while (artistsIDs.length){
+    while (artistsIDs.length !==i){
         var temp = artistsIDs[i].split(':');
         IDs[i]=temp[2];
         console.log(IDs[i]);
+        i++;
     }
 
     console.log(artistsIDs);
