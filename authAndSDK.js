@@ -40,7 +40,7 @@ var devID;
 
 
 
-
+var artistsIDs[];
 
 window.onSpotifyPlayerAPIReady = () => {
     const player = new Spotify.Player({
@@ -57,6 +57,7 @@ window.onSpotifyPlayerAPIReady = () => {
     // Playback status updates
     player.on('player_state_changed', state => {
         console.log(state)
+        artistsIDs = state.track_window.current_track.artists;
         $('#current-track').attr('src', state.track_window.current_track.album.images[2].url);
         $('#current-track-name').text(state.track_window.current_track.name);
         var i=0;
@@ -222,6 +223,7 @@ function play(device_id) {
             //'Content-Type': 'application/json'
         }
     })
+    requestArists();
 }
 
 
@@ -243,6 +245,21 @@ function suffle(device_id) {
         //console.log(response.headers);
         console.log(response.config);
     });
+
+}
+
+function requestArists(){
+
+    axios({
+        method: 'get',
+        url: 'https://api.spotify.com/v1/artists',
+        params: artistsIDs.uri,
+        headers: {
+            'Authorization': 'Bearer '+ _token
+        }
+    }).then(function (response){
+        console.log(response.config);
+    })
 
 }
 
