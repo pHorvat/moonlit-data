@@ -276,7 +276,7 @@ function requestArists(tempIDs){
         //console.log(response.config);
         let r = 0;
         while(r!==15){
-            var el = document.getElementById('artistLink1');
+            var el = document.getElementById('artistLink'+r);
             if (el!=null){
                 el.remove();
             } // Removes the div with the 'div-02' id
