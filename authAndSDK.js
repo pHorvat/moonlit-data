@@ -256,15 +256,15 @@ function requestArists(tempIDs){
     var i =0;
     var IDs = [];
     console.log(tempIDs);
-    while (tempIDs.length !== i){
+    while (tempIDs.uri.length !== i){
         console.log('TEST123');
-        var temp = tempIDs[i].split(':');
+        var temp = tempIDs[i].uri.split(':');
         IDs[i]=temp[2];
         console.log(IDs[i]);
         i++;
     }
 
-    console.log(tempIDs.length);
+    console.log(tempIDs.uri.length);
     console.log(tempIDs);
     axios({
         method: 'get',
