@@ -292,7 +292,7 @@ function requestArists(tempIDs){
 
 
     })
-
+artistsIDs = [];
 }
 
 
