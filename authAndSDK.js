@@ -286,6 +286,7 @@ function requestArists(tempIDs){
             const artistLink = document.getElementById("current-track-artist");
             var parentDiv = document.getElementById("parentElement");
             parentDiv.insertBefore(a, artistLink.nextSibling);
+            i++;
         }
 
 
