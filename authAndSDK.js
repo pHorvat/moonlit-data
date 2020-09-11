@@ -61,7 +61,7 @@ window.onSpotifyPlayerAPIReady = () => {
         $('#current-track-name').text(state.track_window.current_track.name);
         var i=0;
         let artistsArr=[];
-        while(state.track_window.current_track.artists.length!=i){
+        while(state.track_window.current_track.artists.length!==i){
            artistsArr[i]=state.track_window.current_track.artists[i].name;
            i++;
         }
