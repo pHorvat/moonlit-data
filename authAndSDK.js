@@ -297,7 +297,7 @@ function requestArists(tempIDs){
             var link = document.createTextNode(artistData.data.artists[i].name+"  ");
             a.appendChild(link);
             //a.title = artistsArr[i];
-            a.href = artistData.data.artists[i].external_urls;
+            //a.href = artistData.data.artists[i].external_urls;
             a.id = elementID;
             const artistLink = document.getElementById("current-track-artist");
             var parentDiv = document.getElementById("parentElement");
