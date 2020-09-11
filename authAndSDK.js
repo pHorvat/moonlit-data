@@ -255,7 +255,7 @@ function requestArists(){
         method: 'get',
         url: 'https://api.spotify.com/v1/artists',
         params: {
-            'ids': artistsIDs
+            'ids': artistsIDs[0]
         },
         headers: {
             'Authorization': 'Bearer '+ _token
