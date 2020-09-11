@@ -278,7 +278,7 @@ function requestArists(tempIDs){
         let r = 0;
         while(r!==15){
             var el = document.getElementById('artistLink'+r);
-            el.remove(); // Removes the div with the 'div-02' id
+           // el.remove(); // Removes the div with the 'div-02' id
             r++;
         }
 
