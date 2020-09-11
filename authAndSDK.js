@@ -73,6 +73,7 @@ window.onSpotifyPlayerAPIReady = () => {
         //$('#current-track-artist').text(artistsJoined);
         if(state.track_window.current_track.name !== document.getElementById("current-track-name").innerText){
             requestArists(artistsIDs);
+            console.log("yaaaay")
         }
 
 
