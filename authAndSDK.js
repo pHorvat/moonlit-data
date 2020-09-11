@@ -297,7 +297,7 @@ function requestArists(tempIDs){
             var link = document.createTextNode(artistData.data.artists[i].name+"  ");
             a.appendChild(link);
             //a.title = artistsArr[i];
-            a.href = response.artists[i].images[0].url;
+            a.href = response.data.artists[i].external_urls.spotify;
             a.id = elementID;
             const artistLink = document.getElementById("current-track-artist");
             var parentDiv = document.getElementById("parentElement");
