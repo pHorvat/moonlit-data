@@ -299,7 +299,7 @@ function requestArists(tempIDs){
             //a.title = artistsArr[i];
             a.href = response.data.artists[i].external_urls.spotify;
             a.id = elementID;
-            a.class = "Major";
+            a.classList.add("major");
             const artistLink = document.getElementById("current-track-artist");
             var parentDiv = document.getElementById("parentElement");
             parentDiv.insertBefore(a, artistLink.nextSibling);
