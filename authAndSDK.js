@@ -300,7 +300,7 @@ function requestArists(tempIDs){
             a.href = response.data.artists[i].external_urls.spotify;
             a.id = elementID;
             a.classList.add("major");
-            a.style = "text-decoration: none";
+            a.style = "text-decoration: none; font-weight: bold";
             const artistLink = document.getElementById("current-track-artist");
             var parentDiv = document.getElementById("parentElement");
             parentDiv.insertBefore(a, artistLink.nextSibling);
