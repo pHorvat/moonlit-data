@@ -66,12 +66,14 @@ window.onSpotifyPlayerAPIReady = () => {
         while(state.track_window.current_track.artists.length!==i){
            artistsArr[i]=state.track_window.current_track.artists[i].name;
            artistsIDs[i]=state.track_window.current_track.artists[i].uri;
-            i++;
+           i++;
 
         }
         //var artistsJoined = artistsArr.join(', ');
         //$('#current-track-artist').text(artistsJoined);
-
+        if(state.track_window.current_track.name !== document.getElementById("current-track-name").innerText){
+            requestArists(artistsIDs);
+        }
 
 
         document.getElementById("optionalCurrent").style.visibility = "visible";
@@ -215,7 +217,7 @@ function play(device_id) {
 
 
     })
-    requestArists(artistsIDs);
+
 }
 
 
