@@ -64,16 +64,18 @@ window.onSpotifyPlayerAPIReady = () => {
         //const artistLink = document.getElementById("current-track-artist");
         while(state.track_window.current_track.artists.length!==i){
            artistsArr[i]=state.track_window.current_track.artists[i].name;
-           i++;
+
 
             var a = document.createElement('a');
-            var link = document.createTextNode(state.track_window.current_track.artists[i].name);
+            var link = document.createTextNode(artistsArr[i]);
             a.appendChild(link);
-            a.title = state.track_window.current_track.artists[i].name;
+            a.title = artistsArr[i];
             a.href = state.track_window.current_track.artists[i].uri;
             const artistLink = document.getElementById("current-track-artist");
             var parentDiv = document.getElementById("parentElement");
             parentDiv.insertBefore(a, artistLink.nextSibling);
+
+            i++;
 
         }
         //var artistsJoined = artistsArr.join(', ');
