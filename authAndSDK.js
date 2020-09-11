@@ -188,6 +188,7 @@ window.onSpotifyPlayerAPIReady = () => {
 }
 
 var SpotifyURIs = [
+    "spotify:track:6EqPTDiCxs198Udt3prQg7",
     "spotify:track:7FCG2wIYG1XvGRUMACC2cD",
     "spotify:track:5WnPPuttuxYw0jyFnQYpcp",
     "spotify:track:4uLU6hMCjMI75M1A2tKUQC",
