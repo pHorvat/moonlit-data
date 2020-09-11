@@ -107,7 +107,7 @@ window.onSpotifyPlayerAPIReady = () => {
         } ,100);
         setTimeout(function (){
             suffle(data.device_id)
-        } ,500);
+        } ,3000);
 
     });
 
