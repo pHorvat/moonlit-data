@@ -71,7 +71,6 @@ window.onSpotifyPlayerAPIReady = () => {
 
         if(state.track_window.current_track.name !== document.getElementById("current-track-name").innerText){
             requestArists(artistsIDs);
-            console.log("yaaaay")
         }
         $('#current-track').attr('src', state.track_window.current_track.album.images[2].url);
         $('#current-track-name').text(state.track_window.current_track.name);
@@ -278,7 +277,9 @@ function requestArists(tempIDs){
         let r = 0;
         while(r!==15){
             var el = document.getElementById('artistLink1');
-            //el.remove(); // Removes the div with the 'div-02' id
+            if (el!=null){
+                el.remove();
+            } // Removes the div with the 'div-02' id
             r++;
         }
 
