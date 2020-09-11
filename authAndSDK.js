@@ -282,6 +282,8 @@ function requestArists(tempIDs){
             } // Removes the div with the 'div-02' id
             r++;
             el = 0;
+            setTimeout(function (){
+            } ,10);
         }
 
 
