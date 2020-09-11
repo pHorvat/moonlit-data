@@ -280,10 +280,10 @@ function requestArists(tempIDs){
         while (IDs.length !== i) {
 
             var a = document.createElement('a');
-            var link = document.createTextNode(artistData.data.artists[0].name);
+            var link = document.createTextNode(artistData.data.artists[i].name);
             a.appendChild(link);
             //a.title = artistsArr[i];
-            a.href = artistData.data.artists[0].external_urls;
+            a.href = artistData.data.artists[i].external_urls;
             const artistLink = document.getElementById("current-track-artist");
             var parentDiv = document.getElementById("parentElement");
             parentDiv.insertBefore(a, artistLink.nextSibling);
