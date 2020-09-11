@@ -256,7 +256,7 @@ function requestArists(tempIDs){
     var i =0;
     var IDs = [];
     console.log(tempIDs);
-    while (tempIDs.uri.length !== i){
+    while (tempIDs.length !== i){
         console.log('TEST123');
         var temp = tempIDs[i].uri.split(':');
         IDs[i]=temp[2];
@@ -264,7 +264,7 @@ function requestArists(tempIDs){
         i++;
     }
 
-    console.log(tempIDs.uri.length);
+    console.log(tempIDs.length);
     console.log(tempIDs);
     axios({
         method: 'get',
