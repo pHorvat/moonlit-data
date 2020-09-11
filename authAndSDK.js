@@ -61,6 +61,7 @@ window.onSpotifyPlayerAPIReady = () => {
         $('#current-track-name').text(state.track_window.current_track.name);
         var i=0;
         let artistsArr=[];
+        const artistLink = document.getElementById("current-track-artist")
         while(state.track_window.current_track.artists.length!==i){
            artistsArr[i]=state.track_window.current_track.artists[i].name;
            i++;
@@ -70,11 +71,11 @@ window.onSpotifyPlayerAPIReady = () => {
             a.appendChild(link);
             a.title = state.track_window.current_track.artists[i].name;
             a.href = state.track_window.current_track.artists[i].uri;
-            document.body.prepend(a);
+            document.body.insertBefore(artistLink, a);
 
         }
-        var artistsJoined = artistsArr.join(', ');
-        $('#current-track-artist').text(artistsJoined);
+        //var artistsJoined = artistsArr.join(', ');
+        //$('#current-track-artist').text(artistsJoined);
 
         document.getElementById("optionalCurrent").style.visibility = "visible";
         document.getElementById("optionalCurrent2").style.visibility = "visible";
