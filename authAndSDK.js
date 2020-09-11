@@ -68,14 +68,7 @@ window.onSpotifyPlayerAPIReady = () => {
            artistsIDs[i]=state.track_window.current_track.artists[i].uri;
 
 
-            var a = document.createElement('a');
-            var link = document.createTextNode(artistsArr[i]);
-            a.appendChild(link);
-            a.title = artistsArr[i];
-            a.href = state.track_window.current_track.artists[i].uri;
-            const artistLink = document.getElementById("current-track-artist");
-            var parentDiv = document.getElementById("parentElement");
-            parentDiv.insertBefore(a, artistLink.nextSibling);
+
 
             i++;
 
@@ -258,9 +251,7 @@ function requestArists(tempIDs){
 
     var i =0;
     var IDs = [];
-    console.log(tempIDs);
     while (tempIDs.length !== i){
-        console.log('TEST123');
         var temp = tempIDs[i].split(':');
         IDs[i]=temp[2];
         //console.log(IDs[i]);
@@ -281,6 +272,20 @@ function requestArists(tempIDs){
     }).then(function (response){
         console.log(response)
         //console.log(response.config);
+
+        let i =0;
+        while (IDs.length !== i) {
+
+            var a = document.createElement('a');
+            var link = document.createTextNode(response.data.artists[0].name);
+            a.appendChild(link);
+            //a.title = artistsArr[i];
+            a.href = response.artists[0].external_urls.spotify;
+            const artistLink = document.getElementById("current-track-artist");
+            var parentDiv = document.getElementById("parentElement");
+            parentDiv.insertBefore(a, artistLink.nextSibling);
+        }
+
 
     })
 
