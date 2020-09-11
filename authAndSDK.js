@@ -249,7 +249,7 @@ function suffle(device_id) {
 }
 
 function requestArists(){
-
+    console.log(artistsIDs);
     axios({
         method: 'get',
         url: 'https://api.spotify.com/v1/artists',
