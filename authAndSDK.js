@@ -263,12 +263,12 @@ function requestArists(tempIDs){
         console.log('TEST123');
         var temp = tempIDs[i].split(':');
         IDs[i]=temp[2];
-        console.log(IDs[i]);
+        //console.log(IDs[i]);
         i++;
     }
 
-    console.log(tempIDs.length);
-    console.log(tempIDs);
+    //console.log(tempIDs.length);
+    //console.log(tempIDs);
     axios({
         method: 'get',
         url: 'https://api.spotify.com/v1/artists',
@@ -279,7 +279,9 @@ function requestArists(tempIDs){
             'Authorization': 'Bearer '+ _token
         }
     }).then(function (response){
-        console.log(response.config);
+        console.log(response)
+        //console.log(response.config);
+
     })
 
 }
