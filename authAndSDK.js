@@ -39,7 +39,7 @@ if (!_token) {
 var devID;
 
 
-
+document.body.onload = addElement;
 
 
 window.onSpotifyPlayerAPIReady = () => {
