@@ -57,7 +57,7 @@ window.onSpotifyPlayerAPIReady = () => {
     // Playback status updates
     player.on('player_state_changed', state => {
         console.log(state)
-        artistsIDs = state.track_window.current_track.artists[];
+
         $('#current-track').attr('src', state.track_window.current_track.album.images[2].url);
         $('#current-track-name').text(state.track_window.current_track.name);
         var i=0;
@@ -65,6 +65,7 @@ window.onSpotifyPlayerAPIReady = () => {
         //const artistLink = document.getElementById("current-track-artist");
         while(state.track_window.current_track.artists.length!==i){
            artistsArr[i]=state.track_window.current_track.artists[i].name;
+           artistsIDs[i]=state.track_window.current_track.artists[i].uri;
 
 
             var a = document.createElement('a');
