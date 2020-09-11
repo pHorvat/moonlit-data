@@ -277,7 +277,7 @@ function requestArists(tempIDs){
 
             let r = 0;
             while (r !== 5) {
-                var el = document.getElementById('artistLink' + r);
+                //var el = document.getElementById('artistLink' + r);
                 if (el !== null) {
                     document.getElementById('artistLink' + r).remove();
                     console.log("Deleting id " + r)
