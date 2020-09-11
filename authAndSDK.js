@@ -297,7 +297,7 @@ function requestArists(tempIDs){
             var link = document.createTextNode(artistData.data.artists[i].name+"    ");
             a.appendChild(link);
             //a.title = artistsArr[i];
-            a.href = response.data.artists[i].external_urls.spotify;
+            a.href = "#";
             a.id = elementID;
             a.classList.add("major");
             a.style = "text-decoration: none; font-weight: bold";
@@ -314,7 +314,7 @@ function requestArists(tempIDs){
         function artistImage(){
             $('#current-track').attr('src', response.data.artists[0].images[0]);
         }
-        
+
     })
 artistsIDs = [];
 }
