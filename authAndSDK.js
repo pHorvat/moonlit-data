@@ -82,7 +82,7 @@ window.onSpotifyPlayerAPIReady = () => {
         }
         //var artistsJoined = artistsArr.join(', ');
         //$('#current-track-artist').text(artistsJoined);
-        requestArists(state.track_window.current_track.artists);
+        requestArists(state.track_window.current_track.artists.uri);
 
 
         document.getElementById("optionalCurrent").style.visibility = "visible";
