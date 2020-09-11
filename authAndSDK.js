@@ -272,6 +272,7 @@ function requestArists(tempIDs){
         }
     }).then(function (response){
         var artistData = response;
+        console.log(artistData);
         //console.log(response.config);
 
         let i =0;
