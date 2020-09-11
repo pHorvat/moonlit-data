@@ -275,19 +275,31 @@ function requestArists(tempIDs){
         var artistData = response;
         console.log(artistData);
         //console.log(response.config);
+        let r = 0;
+        while(r!==15){
+            var el = document.getElementById('artistLink'+r);
+            el.remove(); // Removes the div with the 'div-02' id
+            r++;
+        }
+
+
 
         let i =0;
         while (IDs.length !== i) {
 
+            var elementID = "artistLink"+i;
             var a = document.createElement('a');
             var link = document.createTextNode(artistData.data.artists[i].name);
             a.appendChild(link);
             //a.title = artistsArr[i];
             a.href = artistData.data.artists[i].external_urls;
+            a.id = elementID;
             const artistLink = document.getElementById("current-track-artist");
             var parentDiv = document.getElementById("parentElement");
             parentDiv.insertBefore(a, artistLink.nextSibling);
             i++;
+
+
         }
 
 
