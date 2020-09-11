@@ -275,7 +275,7 @@ function requestArists(tempIDs){
         console.log(artistData);
         //console.log(response.config);
         let r = 0;
-        while(r!==15){
+        while(r!==5){
             var el = document.getElementById('artistLink'+r);
             if (el!=null){
                 el.remove();
