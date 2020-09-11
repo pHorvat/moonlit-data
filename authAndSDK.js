@@ -253,7 +253,7 @@ function requestArists(){
 
     var i =0;
     var IDs = [];
-    while (artistsIDs.length !==i){
+    while (artistsIDs.length !== i){
         console.log('TEST123');
         var temp = artistsIDs[i].split(':');
         IDs[i]=temp[2];
@@ -261,6 +261,7 @@ function requestArists(){
         i++;
     }
 
+    console.log(artistsIDs.length);
     console.log(artistsIDs);
     axios({
         method: 'get',
