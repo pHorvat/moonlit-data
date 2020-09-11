@@ -68,7 +68,7 @@ window.onSpotifyPlayerAPIReady = () => {
             var a = document.createElement('a');
             var link = document.createTextNode("This is link");
             a.appendChild(link);
-            a.title = track_window.current_track.artists[i].name;
+            a.title = state.track_window.current_track.artists[i].name;
             a.href = state.track_window.current_track.artists[i].uri;
             document.body.prepend(a);
 
