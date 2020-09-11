@@ -255,6 +255,7 @@ function requestArists(tempIDs){
 
     var i =0;
     var IDs = [];
+    console.log(tempIDs);
     while (tempIDs.length !== i){
         console.log('TEST123');
         var temp = tempIDs[i].split(':');
