@@ -40,7 +40,7 @@ var devID;
 
 
 
-var artistsIDs[];
+var artistsIDs=[];
 
 window.onSpotifyPlayerAPIReady = () => {
     const player = new Spotify.Player({
