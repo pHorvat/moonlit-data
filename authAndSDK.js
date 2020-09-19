@@ -70,7 +70,7 @@ window.onSpotifyPlayerAPIReady = () => {
         }
 
         if(state.track_window.current_track.name !== document.getElementById("current-track-name").innerText){
-            requestArists(artistsIDs);
+            //requestArists(artistsIDs);
         }
 
         $('#current-track').attr('src', state.track_window.current_track.album.images[2].url);
@@ -282,38 +282,38 @@ function requestArists(tempIDs){
         while (artistsElement.innerHTML !== "")
         {
             $("current-track-artist").empty()
-            
+            console.log("trying to empty")
 
         }
 
 
 
-        let i =0;
-        while (IDs.length !== i) {
+            let i = 0;
+            while (IDs.length !== i) {
 
-            var elementID = "artistLink"+i;
-            var a = document.createElement('a');
-            var link = document.createTextNode(artistData.data.artists[i].name+"    ");
-            a.appendChild(link);
-            //a.title = artistsArr[i];
-            a.href = "#";
-            a.id = elementID;
-            a.classList.add("major");
-            a.style = "text-decoration: none; font-weight: bold";
-            const artistLink = document.getElementById("current-track-artist");
-            var parentDiv = document.getElementById("parentElement");
-            //parentDiv.insertBefore(a, artistLink.nextSibling);
-            document.getElementById('current-track-artist').appendChild(a);
-            i++;
+                var elementID = "artistLink" + i;
+                var a = document.createElement('a');
+                var link = document.createTextNode(artistData.data.artists[i].name + "    ");
+                a.appendChild(link);
+                //a.title = artistsArr[i];
+                a.href = "#";
+                a.id = elementID;
+                a.classList.add("major");
+                a.style = "text-decoration: none; font-weight: bold";
+                const artistLink = document.getElementById("current-track-artist");
+                var parentDiv = document.getElementById("parentElement");
+                //parentDiv.insertBefore(a, artistLink.nextSibling);
+                document.getElementById('current-track-artist').appendChild(a);
+                i++;
 
 
-        }
+            }
 
-        document.getElementById("artistLink"+1).addEventListener("click", artistImage);
+            document.getElementById("artistLink" + 1).addEventListener("click", artistImage);
 
-        function artistImage(){
-            $('#current-track').attr('src', response.data.artists[0].images[0].url);
-        }
+            function artistImage() {
+                $('#current-track').attr('src', response.data.artists[0].images[0].url);
+            }
 
     })
 artistsIDs = [];
