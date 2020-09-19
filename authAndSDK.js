@@ -277,8 +277,14 @@ function requestArists(tempIDs){
         //console.log(response.config);
 
         //document.getElementById('current-track-artist').innerHTML = "";
+        artistsElement = document.getElementById('current-track-artist');
+        //$("current-track-artist").empty()
+        while (artistsElement.innerHTML !== "")
+        {
+            $("current-track-artist").empty()
+            
 
-        $("current-track-artist").empty()
+        }
 
 
 
