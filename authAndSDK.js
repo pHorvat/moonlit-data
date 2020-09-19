@@ -72,14 +72,13 @@ window.onSpotifyPlayerAPIReady = () => {
 
 
         //const artistLink = document.getElementById("current-track-artist");
-        while(state.track_window.current_track.artists.length!==i){
+        while(state.track_window.current_track.artists.length!==i){                 //Used for clickable artists, not currently working
            artistsArr[i]=state.track_window.current_track.artists[i].name;
            artistsIDs[i]=state.track_window.current_track.artists[i].uri;
            i++;
 
         }
-
-        if(state.track_window.current_track.name !== document.getElementById("current-track-name").innerText){
+        if(state.track_window.current_track.name !== document.getElementById("current-track-name").innerText){  //same as the comment above
             //requestArists(artistsIDs);
         }
 
