@@ -277,6 +277,9 @@ function requestArists(tempIDs){
         //console.log(response.config);
 
         document.getElementById('current-track-artist').innerHTML = "";
+        document.getElementById('current-track-artist').innerHTML = "";
+        document.getElementById('current-track-artist').innerHTML = "";
+        document.getElementById('current-track-artist').innerHTML = "";
 
 
 
