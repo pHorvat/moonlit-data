@@ -276,17 +276,6 @@ function requestArists(tempIDs){
         console.log(artistData);
         //console.log(response.config);
 
-            let r = 0;
-            while (r !== 5) {
-                var el = document.getElementById('artistLink' + r);
-                if (el !== null) {
-                    el.parentNode.removeChild(el);
-                    console.log("Deleting id " + r)
-                } // Removes the div with the 'div-02' id
-                r++;
-
-            }
-
 
 
 
@@ -304,7 +293,8 @@ function requestArists(tempIDs){
             a.style = "text-decoration: none; font-weight: bold";
             const artistLink = document.getElementById("current-track-artist");
             var parentDiv = document.getElementById("parentElement");
-            parentDiv.insertBefore(a, artistLink.nextSibling);
+            //parentDiv.insertBefore(a, artistLink.nextSibling);
+            document.getElementById('current-track-artist').appendChild(a);
             i++;
 
 
