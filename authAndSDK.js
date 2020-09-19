@@ -276,10 +276,9 @@ function requestArists(tempIDs){
         console.log(artistData);
         //console.log(response.config);
 
-        document.getElementById('current-track-artist').innerHTML = "";
-        document.getElementById('current-track-artist').innerHTML = "";
-        document.getElementById('current-track-artist').innerHTML = "";
-        document.getElementById('current-track-artist').innerHTML = "";
+        //document.getElementById('current-track-artist').innerHTML = "";
+
+        $("current-track-artist").empty()
 
 
 
