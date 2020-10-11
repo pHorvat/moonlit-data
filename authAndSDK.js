@@ -101,6 +101,11 @@ window.onSpotifyPlayerAPIReady = () => {
             document.getElementById("tglBtn").innerHTML = "STOP <i class=\"fas fa-pause\"></i>";
         }
 
+        player.addListener('not_ready', ({ device_id }) => {
+            console.log('Device ID is not ready for playback', device_id);
+            window.location.reload(true);
+        });
+
     });
 
     // Ready
