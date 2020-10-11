@@ -214,7 +214,11 @@ var SpotifyURIs = [
     "spotify:track:118vbJqycPASVgrYnCzb9F",
     "spotify:track:55dTgpMdgmZoWUxXtJwGve",
     "spotify:track:30OzfackGMWBpHsRpvtAq6",
-    "spotify:track:57724RmJKfjECtItkTmVZI"
+    "spotify:track:57724RmJKfjECtItkTmVZI",
+    "spotify:track:74ddFVQ0oLkvm20NXddkfi",
+    "spotify:track:3fg5irwtRekQSIOL1UjOId",
+    "spotify:track:1T2VdmzHeR9i5tpPJi5DHH",
+    
 ]
 
 // Play a specified track on the Web Playback SDK's device ID
