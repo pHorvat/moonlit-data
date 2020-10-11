@@ -202,6 +202,7 @@ window.onSpotifyPlayerAPIReady = () => {
 }
 
 var SpotifyURIs = [
+    "spotify:track:3fg5irwtRekQSIOL1UjOId",
     "spotify:track:6EqPTDiCxs198Udt3prQg7",
     "spotify:track:7FCG2wIYG1XvGRUMACC2cD",
     "spotify:track:5WnPPuttuxYw0jyFnQYpcp",
@@ -216,9 +217,8 @@ var SpotifyURIs = [
     "spotify:track:30OzfackGMWBpHsRpvtAq6",
     "spotify:track:57724RmJKfjECtItkTmVZI",
     "spotify:track:74ddFVQ0oLkvm20NXddkfi",
-    "spotify:track:3fg5irwtRekQSIOL1UjOId",
     "spotify:track:1T2VdmzHeR9i5tpPJi5DHH",
-    
+
 ]
 
 // Play a specified track on the Web Playback SDK's device ID
